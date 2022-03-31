@@ -15,6 +15,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
+
         if (coord != transform.position && coord != Vector3.zero)
         {
             transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
@@ -24,17 +25,17 @@ public class CameraMovement : MonoBehaviour
             coord.x = 800;
             transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
         }
-        else if (transform.position.x <= -10)
+        if (transform.position.x <= -10)
         {
             coord.x = 0;
             transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
         }
-        else if (transform.position.z >= 800)
+        if (transform.position.z >= 800)
         {
             coord.z = 800;
             transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
         }
-        else if (transform.position.z <= -10)
+        if (transform.position.z <= -10)
         {
             coord.z = 0;
             transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
@@ -43,12 +44,10 @@ public class CameraMovement : MonoBehaviour
 
     private void OnSwipe(Vector3 direction)
     {
-        direction.z = direction.y;
+        direction.x = -direction.x;
+        direction.z = -direction.y;
         direction.y = transform.position.y;
-        if (transform.position.y >= 10 && transform.position.y <= 30)
-            dir = direction * 10;
-        else
-            dir = direction * 20;
+         dir = direction * Camera.main.fieldOfView;
         Move(dir);
     }
 

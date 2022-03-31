@@ -6,77 +6,66 @@ public class SwipeDetection : MonoBehaviour
 {
     public static event OnSwipeInput SwipeEvent;
     public delegate void OnSwipeInput(Vector3 direction);
+    public static event OnZoomInput ZoomEvent;
+    public delegate void OnZoomInput(float increment);
 
-    private Vector2 tapPosition;
-    private Vector2 swipeDelta;
+    private Vector3 tapPosition;
+    private Vector3 swipeDelta;
 
-    private float deadZone = 0;
     private bool isSwiping;
-    private bool isMobile;
-
-    void Start()
-    {
-        isMobile = Application.isMobilePlatform;
-    }
 
     void Update()
     {
-       if(!isMobile)
+        if (!isSwiping)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 isSwiping = true;
-                tapPosition = Input.mousePosition;
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                ResetSwipe();
+                tapPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             }
         }
         else
         {
-            if (Input.touchCount>0)
+            if (Input.GetMouseButton(0))
             {
-                if (Input.GetTouch(0).phase==TouchPhase.Began)
-                {
-                    isSwiping = true;
-                    tapPosition = Input.GetTouch(0).position;
-                }
-                else if (Input.GetTouch(0).phase == TouchPhase.Canceled ||
-                    Input.GetTouch(0).phase == TouchPhase.Ended)
-                {
-                    ResetSwipe();
-                }
+                swipeDelta = tapPosition - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                SwipeEvent(swipeDelta);
             }
         }
-        CheckSwipe();
-    }
-
-    private void CheckSwipe()
-    {
-        swipeDelta = Vector2.zero;
-
-        if (isSwiping)
+        if (Input.GetMouseButtonUp(0))
         {
-            if (!isMobile && Input.GetMouseButton(0))
-                swipeDelta = (Vector2)Input.mousePosition - tapPosition;
-            else if (Input.touchCount > 0)
-                swipeDelta = Input.GetTouch(0).position - tapPosition; 
-        }
-        if (swipeDelta.magnitude > deadZone)
-        {
-            if (SwipeEvent!=null)
-                SwipeEvent(swipeDelta);
             ResetSwipe();
         }
 
+        if (Input.GetAxis("Mouse ScrollWheel")!=0)
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+                ZoomEvent(1);
+            else
+                ZoomEvent(-1);
+        }
+        if(Input.touchCount==2)
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 touchZeroLastPose = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOneLastPose = touchOne.position - touchOne.deltaPosition;
+
+            float distTouch = (touchZeroLastPose - touchOneLastPose).magnitude;
+            float currentDistTouch = (touchZero.position - touchOne.position).magnitude;
+
+            float difference = currentDistTouch - distTouch;
+
+            ZoomEvent(difference);
+        }
     }
 
     private void ResetSwipe()
     {
         isSwiping = false;
 
-        tapPosition = Vector2.zero;
-        swipeDelta = Vector2.zero;
+        tapPosition = Vector3.zero;
+        swipeDelta = Vector3.zero;
     }
 }
