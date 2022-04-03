@@ -54,9 +54,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\SwipeDetection.cs" />
-    <Compile Include="Assets\Scripts\ClickEvent.cs" />
     <Compile Include="Assets\Scripts\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\SwipeDetection.cs" />
+    <Compile Include="Assets\Scripts\PlatesPuzzle.cs" />
+    <Compile Include="Assets\Scripts\ClickEvent.cs" />
+    <Compile Include="Assets\Scripts\PlateButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
