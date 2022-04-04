@@ -14,8 +14,12 @@ public class PlatesPuzzle : MonoBehaviour
     public MonoBehaviour plate7;
     public MonoBehaviour plate8;
     public MonoBehaviour plate9;
+    private MonoBehaviour obj_for_move;
+    private Vector3 coord_obj_to_move;
+    private GameObject controller;
     private int i;
     private int j;
+    private int temp=0;
     private bool move;
     void Start()
     {
@@ -70,11 +74,28 @@ public class PlatesPuzzle : MonoBehaviour
             puzzleobj[1,0]==plate4 && puzzleobj[1,1]==plate5 && puzzleobj[1,2]==plate6 &&
             puzzleobj[2,0]==plate7 && puzzleobj[2,1]==plate8)
         {
-            print("WIN");
+            controller = GameObject.Find("Interface Main");
+            controller.GetComponent<StartGame>().AfterGamePlates();
         }
     }
-    private void Moving(int i, int j,int ii,int jj)
+    public void PlateMoving(MonoBehaviour to_move,Vector2 new_coords)
     {
+        obj_for_move = to_move;
+        coord_obj_to_move = new_coords;
+    }
 
+    private void Update()
+    {
+        if(obj_for_move!=null && obj_for_move.GetComponent<Transform>().transform.position!=coord_obj_to_move)
+            if(temp<15)
+            {
+                temp++;
+                obj_for_move.GetComponent<Transform>().transform.position = Vector2.Lerp(obj_for_move.GetComponent<Transform>().transform.position, coord_obj_to_move, 10f*Time.deltaTime);
+            }
+            else
+            {
+                temp = 0;
+                obj_for_move.GetComponent<Transform>().transform.position = coord_obj_to_move;
+            }
     }
 }

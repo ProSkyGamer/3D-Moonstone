@@ -75,17 +75,32 @@ public class PlateButton : MonoBehaviour
 
     private void Moving(int i, int j, int ii, int jj,MonoBehaviour moved)
     {
+        Vector2 new_coords = Vector2.zero;
         ismove = true;
-        if (i!=ii)
-            if(i>ii)
-                moved.GetComponent<Transform>().transform.position = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y + 150);//up?
+        if (i != ii)
+            if (i > ii)
+            {
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y + 300);//up
+                controller.GetComponent<PlatesPuzzle>().PlateMoving(moved,new_coords);
+            }
             else
-                moved.GetComponent<Transform>().transform.position = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y - 150);//down?
-        else if(j!=jj)
-            if(j>jj)
-                moved.GetComponent<Transform>().transform.position = new Vector2(moved.GetComponent<Transform>().transform.position.x - 150, moved.GetComponent<Transform>().transform.position.y);//left?
+            { 
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y - 300);//down
+                controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
+            }
+        else if (j != jj)
+            if (j > jj)
+            { 
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x - 300, moved.GetComponent<Transform>().transform.position.y);//left
+                controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
+            }
             else
-                moved.GetComponent<Transform>().transform.position = new Vector2(moved.GetComponent<Transform>().transform.position.x + 150, moved.GetComponent<Transform>().transform.position.y);//right?
+            { 
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x + 300, moved.GetComponent<Transform>().transform.position.y);//right
+                controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
+            }
     }
+
+
 }
 
