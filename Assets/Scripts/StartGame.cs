@@ -11,14 +11,16 @@ public class StartGame : MonoBehaviour
     public GameObject _interface;
     public GameObject plates_game_interface;
     public GameObject plates_interface;
-    
+    public GameObject findsibling_game_interface;
+    public GameObject findsibling_interface;
+
     void Start()
     {
         if (PlayerPrefs.GetInt("max_experience") == 0)
         {
             PlayerPrefs.SetInt("max_experience", 100);
         }
-        if(PlayerPrefs.GetInt("lives") == 0 && PlayerPrefs.GetString("lives_isset")!="yes")
+        if(PlayerPrefs.GetString("lives_isset")!="yes")
         {
             PlayerPrefs.SetString("lives_isset", "yes");
             PlayerPrefs.SetInt("lives", 5);
@@ -76,7 +78,46 @@ public class StartGame : MonoBehaviour
             LivesCountMinus();
             plates_interface.SetActive(false);
             plates_game_interface.SetActive(true);
+            plates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
         }
+    }
+
+    public void LoseGamePlates()
+    {
+        _interface.SetActive(true);
+        plates_game_interface.SetActive(false);
+        UpadteInfo();
+    }
+
+    public void StartGameFindSibling()
+    {
+        if (PlayerPrefs.GetInt("lives") > 0)
+        {
+            LivesCountMinus();
+            findsibling_interface.SetActive(false);
+            findsibling_game_interface.SetActive(true);
+            PlayerPrefs.SetInt("sibling_pairs", 0);
+            PlayerPrefs.SetString("sibling", "x");
+            findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
+        }
+    }
+    public void AfterGameFindSibling()
+    {
+        PlayerPrefs.SetInt("sibling_pairs", 0);
+        PlayerPrefs.SetString("sibling", "x");
+        _interface.SetActive(true);
+        findsibling_game_interface.SetActive(false);
+        PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + 10);
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + Random.Range(10, 20));
+        UpadteInfo();
+    }
+
+    public void LoseGameFindSibling()
+    {
+        _interface.SetActive(true);
+        findsibling_game_interface.SetActive(false);
+        UpadteInfo();
     }
 
     public void AddLives()

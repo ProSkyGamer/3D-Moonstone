@@ -57,9 +57,13 @@
     <Compile Include="Assets\Scripts\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\SwipeDetection.cs" />
     <Compile Include="Assets\Scripts\PlateButton.cs" />
+    <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\PlatesPuzzle.cs" />
     <Compile Include="Assets\Scripts\ClickEvent.cs" />
-    <Compile Include="Assets\Scripts\StartGame.cs" />
+    <Compile Include="Assets\Scripts\LivesTimer.cs" />
+    <Compile Include="Assets\Scripts\PuzzleTimer.cs" />
+    <Compile Include="Assets\Scripts\FindSiblingButton.cs" />
+    <Compile Include="Assets\Scripts\ResetGameFindSibling.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
