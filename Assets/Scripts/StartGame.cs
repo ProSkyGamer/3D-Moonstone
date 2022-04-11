@@ -8,11 +8,16 @@ public class StartGame : MonoBehaviour
     public Text coins_int;
     public Text exp_int;
     public Text lives_int;
+    private bool need;
+    private string game;
+    public GameObject swiping;
     public GameObject _interface;
     public GameObject plates_game_interface;
     public GameObject plates_interface;
+    public GameObject plates_rewards;
     public GameObject findsibling_game_interface;
     public GameObject findsibling_interface;
+    public GameObject findsibling_rewards;
 
     void Start()
     {
@@ -20,7 +25,7 @@ public class StartGame : MonoBehaviour
         {
             PlayerPrefs.SetInt("max_experience", 100);
         }
-        if(PlayerPrefs.GetString("lives_isset")!="yes")
+        if (PlayerPrefs.GetString("lives_isset") != "yes")
         {
             PlayerPrefs.SetString("lives_isset", "yes");
             PlayerPrefs.SetInt("lives", 5);
@@ -30,12 +35,14 @@ public class StartGame : MonoBehaviour
         int exp = PlayerPrefs.GetInt("experience");
         int max_exp = PlayerPrefs.GetInt("max_experience");
 
-        
+
+
+
 
         coins_int.text = System.Convert.ToString(coins);
         lives_int.text = System.Convert.ToString(lives);
         exp_int.text = System.Convert.ToString(exp + "/" + max_exp);
-        
+
     }
 
     public void LivesCountMinus()
@@ -44,7 +51,8 @@ public class StartGame : MonoBehaviour
     }
 
     public void UpadteInfo()
-    {   if(PlayerPrefs.GetInt("experience")>=PlayerPrefs.GetInt("max_experience"))
+    {
+        if (PlayerPrefs.GetInt("experience") >= PlayerPrefs.GetInt("max_experience"))
         {
             PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") - PlayerPrefs.GetInt("max_experience"));
             PlayerPrefs.SetInt("max_experience", PlayerPrefs.GetInt("max_experience") + 100);
@@ -63,17 +71,24 @@ public class StartGame : MonoBehaviour
 
     public void AfterGamePlates()
     {
-        _interface.SetActive(true);
-        plates_game_interface.SetActive(false);
+        int exp = 10;
+        int coins = Random.Range(10, 20);
+
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
-        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + 10);
-        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + Random.Range(10, 20));
-        UpadteInfo();
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+
+        plates_rewards.SetActive(true);
+        plates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
+        plates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
+
+        need = true;
+        game = "plates";
     }
 
     public void StartGamePlates()
     {
-        if(PlayerPrefs.GetInt("lives")>0)
+        if (PlayerPrefs.GetInt("lives") > 0)
         {
             LivesCountMinus();
             plates_interface.SetActive(false);
@@ -103,15 +118,49 @@ public class StartGame : MonoBehaviour
     }
     public void AfterGameFindSibling()
     {
+        int exp = 10;
+        int coins = Random.Range(10, 20);
+
         PlayerPrefs.SetInt("sibling_pairs", 0);
         PlayerPrefs.SetString("sibling", "x");
-        _interface.SetActive(true);
-        findsibling_game_interface.SetActive(false);
+
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
-        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + 10);
-        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + Random.Range(10, 20));
-        UpadteInfo();
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+
+        findsibling_rewards.SetActive(true);
+        findsibling_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
+        findsibling_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
+
+        need = true;
+        game = "findsibling";
     }
+
+    private void Update()
+    {
+        if (need && Input.GetMouseButton(0))
+        {
+            if (game == "findsibling")
+            {
+                findsibling_rewards.SetActive(false);
+                _interface.SetActive(true);
+                swiping.SetActive(true);
+                findsibling_game_interface.SetActive(false);
+
+                UpadteInfo();
+            }
+            else if (game == "plates")
+            {
+                _interface.SetActive(true);
+                plates_rewards.SetActive(false);
+                plates_game_interface.SetActive(false);
+                swiping.SetActive(true);
+
+                UpadteInfo();
+            }
+        }
+    }
+
 
     public void LoseGameFindSibling()
     {

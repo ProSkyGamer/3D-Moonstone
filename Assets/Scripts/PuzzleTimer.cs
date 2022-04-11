@@ -18,21 +18,24 @@ public class PuzzleTimer : MonoBehaviour
 
     void Update()
     {
-        seconds -= Time.deltaTime;
-        if(seconds<=0.2)
+        if (gameObject.activeSelf == true)
         {
-            minutes -= 1;
-            if(minutes==-1)
+            seconds -= Time.deltaTime;
+            if (seconds <= 0.2)
             {
-                GameObject controller = GameObject.Find("Interface Main");
-                if (game_name=="plates")
-                    controller.GetComponent<StartGame>().LoseGamePlates();
-                else if (game_name=="findsibling")
-                    controller.GetComponent<StartGame>().LoseGameFindSibling();
+                minutes -= 1;
+                if (minutes == -1)
+                {
+                    GameObject controller = GameObject.Find("Interface Main");
+                    if (game_name == "plates")
+                        controller.GetComponent<StartGame>().LoseGamePlates();
+                    else if (game_name == "findsibling")
+                        controller.GetComponent<StartGame>().LoseGameFindSibling();
+                }
+                seconds = 60;
             }
-            seconds = 60;
+            gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + seconds.ToString();
         }
-        gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + seconds.ToString();
 
     }
     public void OnStart()

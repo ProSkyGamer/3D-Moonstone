@@ -6,6 +6,9 @@ public class FindSiblingButton : MonoBehaviour
 {
     public string type;
     private GameObject controller;
+    private bool need;
+    private GameObject sibling;
+    private float timer=1f;
 
 
     private void Start()
@@ -16,37 +19,58 @@ public class FindSiblingButton : MonoBehaviour
     }
     public void OnClickSibling()
     {
-        if(PlayerPrefs.GetString("sibling")=="x")
+        if (!need)
         {
-            PlayerPrefs.SetString("sibling",type);
-            PlayerPrefs.SetString("sibling_name", gameObject.name);
-            gameObject.transform.position = new Vector3(transform.position.x - 2000,transform.position.y,transform.position.z);
-        }
-        else
-        {
-            GameObject sibling = GameObject.Find(PlayerPrefs.GetString("sibling_name"));
-            sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
-            if (PlayerPrefs.GetString("sibling")==type)
+            if (PlayerPrefs.GetString("sibling") == "x")
             {
-                gameObject.SetActive(false);
-                sibling.SetActive(false);
-                PlayerPrefs.SetInt("sibling_pairs", PlayerPrefs.GetInt("sibling_pairs") + 1);
-                PlayerPrefs.SetString("sibling", "x");
-                PlayerPrefs.SetString("sibling_name", "");
-                if (PlayerPrefs.GetInt("sibling_pairs") == 12)
-                {
-                    GameObject new_controller = GameObject.Find("FindSibling Script");
-                    new_controller.GetComponent<ResetGameFindSibling>().ResetFindSibling();
-                    controller.GetComponent<StartGame>().AfterGameFindSibling();
-                }
-            } 
+                PlayerPrefs.SetString("sibling", type);
+                PlayerPrefs.SetString("sibling_name", gameObject.name);
+                gameObject.transform.position = new Vector3(transform.position.x - 2000, transform.position.y, transform.position.z);
+            }
             else
-            { 
-                gameObject.SetActive(true);
-                PlayerPrefs.SetString("sibling", "x");
-                PlayerPrefs.SetString("sibling_name", "");
+            {
+                sibling = GameObject.Find(PlayerPrefs.GetString("sibling_name"));
+
+                if (PlayerPrefs.GetString("sibling") == type)
+                {
+                    sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
+                    gameObject.SetActive(false);
+                    sibling.SetActive(false);
+                    PlayerPrefs.SetInt("sibling_pairs", PlayerPrefs.GetInt("sibling_pairs") + 1);
+                    PlayerPrefs.SetString("sibling", "x");
+                    PlayerPrefs.SetString("sibling_name", "");
+                    if (PlayerPrefs.GetInt("sibling_pairs") == 12)
+                    {
+                        GameObject new_controller = GameObject.Find("FindSibling Script");
+                        new_controller.GetComponent<ResetGameFindSibling>().ResetFindSibling();
+                        controller.GetComponent<StartGame>().AfterGameFindSibling();
+                    }
+                }
+                else
+                {
+                    gameObject.transform.position = new Vector3(transform.position.x - 2000, transform.position.y, transform.position.z);
+                    need = true;
+                    PlayerPrefs.SetString("sibling", "x");
+                    PlayerPrefs.SetString("sibling_name", "");
+                }
             }
         }
         
+    }
+
+    private void Update()
+    {
+        if(need)
+        {
+            timer -= Time.deltaTime;
+            if(timer<=0)
+            {
+                timer = 1f;
+                need = false;
+
+                gameObject.transform.position = new Vector3(transform.position.x + 2000, transform.position.y, transform.position.z);
+                sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
+            }
+        }
     }
 }

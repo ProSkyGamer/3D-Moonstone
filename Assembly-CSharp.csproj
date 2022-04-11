@@ -53,17 +53,29 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\ResetGameFindSibling.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\SwipeDetection.cs" />
+    <Compile Include="Assets\Scripts\FindSiblingButton.cs" />
+    <Compile Include="Assets\Scripts\LivesTimer.cs" />
+    <Compile Include="Assets\Scripts\PuzzleTimer.cs" />
     <Compile Include="Assets\Scripts\PlateButton.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\PlatesPuzzle.cs" />
     <Compile Include="Assets\Scripts\ClickEvent.cs" />
-    <Compile Include="Assets\Scripts\LivesTimer.cs" />
-    <Compile Include="Assets\Scripts\PuzzleTimer.cs" />
-    <Compile Include="Assets\Scripts\FindSiblingButton.cs" />
-    <Compile Include="Assets\Scripts\ResetGameFindSibling.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Scripts\JoysticMovement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

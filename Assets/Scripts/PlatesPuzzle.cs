@@ -58,14 +58,6 @@ public class PlatesPuzzle : MonoBehaviour
             puzzleobj[2, 0] = plate7;
             puzzleobj[2, 1] = plate8;
         }
-        /*for(i=0;i<=2;i++)
-        {
-            for(j=0;j<=2;j++)
-            {
-                var obj = puzzleobj[i, j].GetComponent<Transform>();
-                print(obj.position.x);
-            }
-        }*/
     }
     
     public void CheckWin()
@@ -86,16 +78,19 @@ public class PlatesPuzzle : MonoBehaviour
 
     private void Update()
     {
-        if(obj_for_move!=null && obj_for_move.GetComponent<Transform>().transform.position!=coord_obj_to_move)
-            if(temp<15)
-            {
-                temp++;
-                obj_for_move.GetComponent<Transform>().transform.position = Vector2.Lerp(obj_for_move.GetComponent<Transform>().transform.position, coord_obj_to_move, 10f*Time.deltaTime);
-            }
-            else
-            {
-                temp = 0;
-                obj_for_move.GetComponent<Transform>().transform.position = coord_obj_to_move;
-            }
+        if (gameObject.activeSelf == true)
+        {
+            if (obj_for_move != null && obj_for_move.GetComponent<Transform>().transform.position != coord_obj_to_move)
+                if (temp < 15)
+                {
+                    temp++;
+                    obj_for_move.GetComponent<Transform>().transform.position = Vector2.Lerp(obj_for_move.GetComponent<Transform>().transform.position, coord_obj_to_move, 10f * Time.deltaTime);
+                }
+                else
+                {
+                    temp = 0;
+                    obj_for_move.GetComponent<Transform>().transform.position = coord_obj_to_move;
+                }
+        }
     }
 }

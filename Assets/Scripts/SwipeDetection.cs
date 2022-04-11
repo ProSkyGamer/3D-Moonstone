@@ -16,48 +16,51 @@ public class SwipeDetection : MonoBehaviour
 
     void Update()
     {
-        if (!isSwiping)
+        if (gameObject.activeSelf == true)
         {
-            if (Input.GetMouseButtonDown(0))
+            /*if (!isSwiping)
             {
-                isSwiping = true;
-                tapPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isSwiping = true;
+                    tapPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                }
             }
-        }
-        else
-        {
-            if (Input.GetMouseButton(0))
-            {
-                swipeDelta = tapPosition - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                SwipeEvent(swipeDelta);
-            }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            ResetSwipe();
-        }
-
-        if (Input.GetAxis("Mouse ScrollWheel")!=0)
-        {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
-                ZoomEvent(1);
             else
-                ZoomEvent(-1);
-        }
-        if(Input.touchCount==2)
-        {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    swipeDelta = tapPosition - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                    SwipeEvent(swipeDelta);
+                }
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                ResetSwipe();
+            }*/
 
-            Vector2 touchZeroLastPose = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOneLastPose = touchOne.position - touchOne.deltaPosition;
+            if (Input.GetAxis("Mouse ScrollWheel") != 0)
+            {
+                if (Input.GetAxis("Mouse ScrollWheel") > 0)
+                    ZoomEvent(1);
+                else
+                    ZoomEvent(-1);
+            }
+            if (Input.touchCount == 2)
+            {
+                Touch touchZero = Input.GetTouch(0);
+                Touch touchOne = Input.GetTouch(1);
 
-            float distTouch = (touchZeroLastPose - touchOneLastPose).magnitude;
-            float currentDistTouch = (touchZero.position - touchOne.position).magnitude;
+                Vector2 touchZeroLastPose = touchZero.position - touchZero.deltaPosition;
+                Vector2 touchOneLastPose = touchOne.position - touchOne.deltaPosition;
 
-            float difference = currentDistTouch - distTouch;
+                float distTouch = (touchZeroLastPose - touchOneLastPose).magnitude;
+                float currentDistTouch = (touchZero.position - touchOne.position).magnitude;
 
-            ZoomEvent(difference);
+                float difference = currentDistTouch - distTouch;
+
+                ZoomEvent(difference);
+            }
         }
     }
 

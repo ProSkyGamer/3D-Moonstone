@@ -16,9 +16,4 @@ public class CameraZoom : MonoBehaviour
     {
         Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView - increment, zoomMin, zoomMax);
     }
-
-    void Update()
-    {
-
-    }
 }
