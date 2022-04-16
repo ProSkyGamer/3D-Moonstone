@@ -174,4 +174,15 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("lives", 5);
         UpadteInfo();
     }
+
+    public void StartGameFollowingPuzzle()
+    {
+        for(int i =1;i<=6;i++)
+        {
+            PlayerPrefs.SetInt("followingplate" + i, Random.Range(1, 6));
+        }
+        PlayerPrefs.SetInt("following_puzzle_stage", 1);
+
+
+    }
 }
