@@ -15,11 +15,11 @@ D:/Learn/Game-Quest-Puzzle-main
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49467
+57020
 Successfully changed project path to: D:/Learn/Game-Quest-Puzzle-main
 D:/Learn/Game-Quest-Puzzle-main
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 32.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 72.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.33f1 (915a7af8b0d5)
 [Subsystems] Discovering subsystems at path D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/Resources/UnitySubsystems
@@ -35,93 +35,93 @@ Initialize mono
 Mono path[0] = 'D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Учеба/Unity/Unity Hub/2020.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001175 seconds.
+Registered in 0.002272 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 34.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.527 seconds
+- Completed reload, in  1.190 seconds
 Domain Reload Profiling:
-	ReloadAssembly (527ms)
-		BeginReloadAssembly (54ms)
+	ReloadAssembly (1191ms)
+		BeginReloadAssembly (116ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (408ms)
-			LoadAssemblies (54ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (940ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (137ms)
+			SetupTypeCache (291ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (151ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (346ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (35ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (77ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (69ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (190ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001885 seconds.
+Registered in 0.003517 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.886 seconds
+- Completed reload, in  1.908 seconds
 Domain Reload Profiling:
-	ReloadAssembly (887ms)
-		BeginReloadAssembly (135ms)
+	ReloadAssembly (1910ms)
+		BeginReloadAssembly (357ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (700ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1439ms)
+			LoadAssemblies (176ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (240ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (266ms)
+			SetupTypeCache (500ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (525ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (54ms)
-				ProcessInitializeOnLoadAttributes (197ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (394ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1533 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 82.9 MB.
-System memory in use after: 82.9 MB.
+System memory in use after: 83.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1983.
-Total: 3.113000 ms (FindLiveObjects: 0.191900 ms CreateObjectMapping: 0.061800 ms MarkObjects: 2.776000 ms  DeleteObjects: 0.082100 ms)
+Total: 5.427700 ms (FindLiveObjects: 0.210200 ms CreateObjectMapping: 0.070200 ms MarkObjects: 4.969900 ms  DeleteObjects: 0.175400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,6 +136,1204 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Joystick Pack
-  artifactKey: Guid(ce9615c2a0183a143a086c0b253b4f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Joystick Pack using Guid(ce9615c2a0183a143a086c0b253b4f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a7f0fd4ad2b665f7aeebade8beaeae7') in 0.007998 seconds 
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png
+  artifactKey: Guid(5eda94a9dcf71e445ad17e3c065d1460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png using Guid(5eda94a9dcf71e445ad17e3c065d1460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd493ca03d19dfe18397339f7a235c89') in 0.226391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000520 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Outline.png
+  artifactKey: Guid(085185b08a40a924985bc0e4176edea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Outline.png using Guid(085185b08a40a924985bc0e4176edea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fcd31cf8879eceae7a3b31401273a60') in 0.086285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png
+  artifactKey: Guid(5b56d9fa0e8bd6e409ed188db38a692c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png using Guid(5b56d9fa0e8bd6e409ed188db38a692c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3100e29c2564ef21c968311c1ea18c74') in 0.026235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png
+  artifactKey: Guid(84487d73ca4b791498332d8f6858417f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png using Guid(84487d73ca4b791498332d8f6858417f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4aa6495af70c92c351b186d40756e9') in 0.039565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000456 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png
+  artifactKey: Guid(2a1f3cba20f3e11498474a705db12fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png using Guid(2a1f3cba20f3e11498474a705db12fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74c80794bfa35ce23b3cc977fcc2758') in 0.038043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000583 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png
+  artifactKey: Guid(54628aafa20f64b40ae661038ee7abf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png using Guid(54628aafa20f64b40ae661038ee7abf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9c66d6de3a48efa6e7c3959b48efaa') in 0.039901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png
+  artifactKey: Guid(48c0d4d6bebaa934384b07aa1e2f8184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png using Guid(48c0d4d6bebaa934384b07aa1e2f8184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4089865d8904fd8f0129d92a7330ef') in 0.039799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png
+  artifactKey: Guid(4cbc879550e5e374a925e2e0a84d6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png using Guid(4cbc879550e5e374a925e2e0a84d6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b88c54103f09d8e9a5d979bf53566ce7') in 0.040296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.817395 seconds.
+  path: Assets/UI
+  artifactKey: Guid(7469d941dbb0f9a4f84009f4ad53a12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI using Guid(7469d941dbb0f9a4f84009f4ad53a12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb1446234086f8e7b323ad693a48586b') in 0.020411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.270246 seconds.
+  path: Assets/UI/время.png
+  artifactKey: Guid(6a823014bc3581b43b8cc9efbac42dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/время.png using Guid(6a823014bc3581b43b8cc9efbac42dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a835bb4d78e71b6e27615a68272d1a') in 0.025756 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005291 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.902 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1904ms)
+		BeginReloadAssembly (242ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (65ms)
+		EndReloadAssembly (1546ms)
+			LoadAssemblies (182ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (535ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (536ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (394ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.3 MB.
+System memory in use after: 85.4 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1993.
+Total: 6.695900 ms (FindLiveObjects: 0.288000 ms CreateObjectMapping: 0.076200 ms MarkObjects: 6.293200 ms  DeleteObjects: 0.036200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 750.154840 seconds.
+  path: Assets/UI/доска.png
+  artifactKey: Guid(29b0d89c67c1f2846a36339b31dd7043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/доска.png using Guid(29b0d89c67c1f2846a36339b31dd7043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b129f7514084a59d7c8721b67e1a3ae') in 0.161097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 969.274602 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png
+  artifactKey: Guid(9332cf0d233636a40a024382720294a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png using Guid(9332cf0d233636a40a024382720294a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83ac9d5ae42864a8007ee12ccb880a8b') in 0.108913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png
+  artifactKey: Guid(3bf6d9f920f7458448a390f80318ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png using Guid(3bf6d9f920f7458448a390f80318ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0571a68e0c72e7bd8423409ef8f86e7') in 0.068760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000604 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png
+  artifactKey: Guid(ab6db91373811284caeba2e9472fa9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png using Guid(ab6db91373811284caeba2e9472fa9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aa7c028db07cce32635db0dd42ac292') in 0.056930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000571 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png
+  artifactKey: Guid(097782735540f2d4db5606eae04ae6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png using Guid(097782735540f2d4db5606eae04ae6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af57c91280f4df7b5268e1e503232d31') in 0.065659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000466 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png
+  artifactKey: Guid(7927b9032dc11e841af3f9a1353d7ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png using Guid(7927b9032dc11e841af3f9a1353d7ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2c187acc3386f9dd340a539229cc55') in 0.072134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000622 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png
+  artifactKey: Guid(a6c56474666ce0647bdb766e9b4764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png using Guid(a6c56474666ce0647bdb766e9b4764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b5042551c487c8cb3b0fa649b9c9194') in 0.050294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000567 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png
+  artifactKey: Guid(3a74f678ee8f3bd49aacf3de1ae4bcaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png using Guid(3a74f678ee8f3bd49aacf3de1ae4bcaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d55a39d72bc2a111ae3622778f6655e') in 0.054447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000697 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png
+  artifactKey: Guid(b8467ea5fbaf9ba42908de6411bd443d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png using Guid(b8467ea5fbaf9ba42908de6411bd443d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acdb0d684b410bd58e5c571b52c5d3d4') in 0.060866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000522 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png
+  artifactKey: Guid(f353d42d1db27ff42b78b28efd86b316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png using Guid(f353d42d1db27ff42b78b28efd86b316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cbdd14c473c98ef789a3e4d4b3c4261') in 0.052813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000672 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png
+  artifactKey: Guid(c615706690ca87043ad593475e6db7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png using Guid(c615706690ca87043ad593475e6db7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0721e90ac5287ebd0a8ee10a73088f59') in 0.058943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000651 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png
+  artifactKey: Guid(6304ad603f150b649b764d29bbc2a87b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png using Guid(6304ad603f150b649b764d29bbc2a87b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a15764921f4bc95e11c84083fbb90745') in 0.054553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000566 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png
+  artifactKey: Guid(08c1fa6351174a9439d97cfc9d3307cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png using Guid(08c1fa6351174a9439d97cfc9d3307cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '041f1c51e423669a7d842511e9cf5abe') in 0.061718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png
+  artifactKey: Guid(f054197ef28924b4986cbd91de2ab054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png using Guid(f054197ef28924b4986cbd91de2ab054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3170febc83319e7e451bd466a0f250') in 0.060233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000511 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Plain.png
+  artifactKey: Guid(010a6e5305fa7004f89c5d317b7b47d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Plain.png using Guid(010a6e5305fa7004f89c5d317b7b47d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a77e045a83c5363630d86fa532f67a77') in 0.036315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000661 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png
+  artifactKey: Guid(c8585b68a92b5d440992ddd7d1b1a3d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png using Guid(c8585b68a92b5d440992ddd7d1b1a3d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '561e255daf189011e998507c731c8f5e') in 0.055226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000699 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png
+  artifactKey: Guid(cd0a2c1b2c014ba4c80c1df786e150e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png using Guid(cd0a2c1b2c014ba4c80c1df786e150e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ad7fe4aa9cd2bbc8a09208b664bdc9') in 0.060660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.418613 seconds.
+  path: Assets/UI/Cartoon wooden game assets.png
+  artifactKey: Guid(eba2c612f0e239d4ea9b724ba66892f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Cartoon wooden game assets.png using Guid(eba2c612f0e239d4ea9b724ba66892f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc46567cf2b8bf56525b0097073d3d38') in 0.038780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 414.532856 seconds.
+  path: Assets/UI/photo5388852349570759075.jpg
+  artifactKey: Guid(d588a7fbb43ee984fa1789d03578b240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/photo5388852349570759075.jpg using Guid(d588a7fbb43ee984fa1789d03578b240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '047fe75db9a0bc4bc9463e0117001991') in 0.032901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 132.084696 seconds.
+  path: Assets/UI/photo5388852349570759075 (1).jpg
+  artifactKey: Guid(e03659c724b16f64c8230786a7c7f1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/photo5388852349570759075 (1).jpg using Guid(e03659c724b16f64c8230786a7c7f1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5652d83c7e7f9765b071e19671f1d8') in 0.020421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 337.745664 seconds.
+  path: Assets/UI/выход.png
+  artifactKey: Guid(4cc73625aa6cba649b5a8583f1e261e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/выход.png using Guid(4cc73625aa6cba649b5a8583f1e261e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39fcf0606c588af0e414e8275908bc22') in 0.027592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 384.937093 seconds.
+  path: Assets/UI/выход 1.png
+  artifactKey: Guid(d207bff5ea4110549a5ac5cd9e64bc0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/выход 1.png using Guid(d207bff5ea4110549a5ac5cd9e64bc0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed5f91f648c5cb2916e5773a1dbd2a77') in 0.061516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 495.912690 seconds.
+  path: Assets/UI/домой.png
+  artifactKey: Guid(fcbc6970cc59ee542aca9e546e24b5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/домой.png using Guid(fcbc6970cc59ee542aca9e546e24b5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5cd008a62f6165e076ec1cb28bd76a') in 0.038598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.394387 seconds.
+  path: Assets/UI/домой 1.png
+  artifactKey: Guid(bb7f2d2155a71fd4f85c430d61c97572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/домой 1.png using Guid(bb7f2d2155a71fd4f85c430d61c97572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8210ebe9400da8fbd538f05071436d') in 0.023468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 280.349203 seconds.
+  path: Assets/UI/отмена.png
+  artifactKey: Guid(7170c32501c635045befc4663f9f58d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/отмена.png using Guid(7170c32501c635045befc4663f9f58d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a2d35a73351eb25d0104fd0fc183fae') in 0.048224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 262.838067 seconds.
+  path: Assets/UI/подтвердить.png
+  artifactKey: Guid(df49b4ddd230c6d4d811110607340e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/подтвердить.png using Guid(df49b4ddd230c6d4d811110607340e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3835e2bcaa3184a609c84daa8178f2ac') in 0.038177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1286.524757 seconds.
+  path: Assets/UI/1.png
+  artifactKey: Guid(7f4dbf6ee930198418dbbf53d95c3499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/1.png using Guid(7f4dbf6ee930198418dbbf53d95c3499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '995a00defb43eac6bf07450ec691f245') in 0.025436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/UI/3.png
+  artifactKey: Guid(12d712fba08411b499717a4db0253271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/3.png using Guid(12d712fba08411b499717a4db0253271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6101a81f76e48c334cb9681d8ea20804') in 0.027295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000632 seconds.
+  path: Assets/UI/5.png
+  artifactKey: Guid(ab4da871234bcc14f83183aac963f03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/5.png using Guid(ab4da871234bcc14f83183aac963f03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520f1f3ef1188e1d9da4f52a7baed4a9') in 0.024465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/UI/7.png
+  artifactKey: Guid(8d087a2dee9dd754b8abda5ca49b0dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/7.png using Guid(8d087a2dee9dd754b8abda5ca49b0dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c33585fd3bbe1eea0745bf54b73bca') in 0.020563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/UI/8.png
+  artifactKey: Guid(9da93f63fda5e5a489658cf7eaf49370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/8.png using Guid(9da93f63fda5e5a489658cf7eaf49370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c156fb096877f2a7528b60c349db56') in 0.024702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000691 seconds.
+  path: Assets/UI/6.png
+  artifactKey: Guid(7140896f506a8b142b6e1535f2adfe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/6.png using Guid(7140896f506a8b142b6e1535f2adfe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f480607b6d8bbad0ee3f5582ae549a5c') in 0.021883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/UI/2.png
+  artifactKey: Guid(516f1c7df28af2a48a7936a958e974ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2.png using Guid(516f1c7df28af2a48a7936a958e974ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f986d108bc2facc8cd5768022a694fc') in 0.024317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000464 seconds.
+  path: Assets/UI/4.png
+  artifactKey: Guid(0b77bf5b355c4f64aa6e7abe7dbff89d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/4.png using Guid(0b77bf5b355c4f64aa6e7abe7dbff89d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbdbc415a1ccf1875ac2bb63b0c2d5e0') in 0.029374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.550570 seconds.
+  path: Assets/UI/9.png
+  artifactKey: Guid(0dac03f6c24ce5b4d80cc6254ed70f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/9.png using Guid(0dac03f6c24ce5b4d80cc6254ed70f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '815091a47897d004efd804ef25711439') in 0.021097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000463 seconds.
+  path: Assets/UI/полная.png
+  artifactKey: Guid(443433f64763db742a0e6ec6dcb06f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/полная.png using Guid(443433f64763db742a0e6ec6dcb06f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16762181e797372a3802e2da5c525adb') in 0.109336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 529.852700 seconds.
+  path: Assets/Scripts/PlateButton.cs
+  artifactKey: Guid(11456fbd78271d44b8384806806caba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlateButton.cs using Guid(11456fbd78271d44b8384806806caba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ffc605f2a236da2d6be2008c1d5f5a4') in 0.146025 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007707 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.177 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2181ms)
+		BeginReloadAssembly (345ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (27ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (151ms)
+		EndReloadAssembly (1712ms)
+			LoadAssemblies (202ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (600ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (114ms)
+			SetupLoadedEditorAssemblies (532ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (385ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1998.
+Total: 6.755500 ms (FindLiveObjects: 0.313800 ms CreateObjectMapping: 0.084700 ms MarkObjects: 6.267600 ms  DeleteObjects: 0.087000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11.758533 seconds.
+  path: Assets/Scripts/PlatesPuzzle.cs
+  artifactKey: Guid(943a8b57e7b385149a4641b9fa7eebff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlatesPuzzle.cs using Guid(943a8b57e7b385149a4641b9fa7eebff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a2707eba1bc3910b4225c57e4b8b26') in 0.018761 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004371 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2038ms)
+		BeginReloadAssembly (205ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (65ms)
+		EndReloadAssembly (1715ms)
+			LoadAssemblies (167ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (547ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (100ms)
+			SetupLoadedEditorAssemblies (646ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (489ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2001.
+Total: 7.471500 ms (FindLiveObjects: 0.401600 ms CreateObjectMapping: 0.135500 ms MarkObjects: 6.887700 ms  DeleteObjects: 0.043600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003966 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.013 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2014ms)
+		BeginReloadAssembly (190ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1704ms)
+			LoadAssemblies (193ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (581ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (100ms)
+			SetupLoadedEditorAssemblies (581ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (107ms)
+				ProcessInitializeOnLoadAttributes (435ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2004.
+Total: 7.614200 ms (FindLiveObjects: 0.275800 ms CreateObjectMapping: 0.076700 ms MarkObjects: 7.208800 ms  DeleteObjects: 0.050700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005119 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.014 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2015ms)
+		BeginReloadAssembly (187ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1704ms)
+			LoadAssemblies (169ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (695ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (80ms)
+			SetupLoadedEditorAssemblies (538ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (400ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 5.611900 ms (FindLiveObjects: 0.263700 ms CreateObjectMapping: 0.090900 ms MarkObjects: 5.171100 ms  DeleteObjects: 0.083900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003232 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.845 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1846ms)
+		BeginReloadAssembly (194ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1513ms)
+			LoadAssemblies (187ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (529ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (514ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (392ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2010.
+Total: 5.431800 ms (FindLiveObjects: 0.234800 ms CreateObjectMapping: 0.074300 ms MarkObjects: 5.086700 ms  DeleteObjects: 0.034500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005303 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.832 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1833ms)
+		BeginReloadAssembly (197ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1524ms)
+			LoadAssemblies (164ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (582ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (491ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (359ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2013.
+Total: 5.895400 ms (FindLiveObjects: 0.212900 ms CreateObjectMapping: 0.070000 ms MarkObjects: 5.563600 ms  DeleteObjects: 0.046400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005420 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.868 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1869ms)
+		BeginReloadAssembly (191ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (1543ms)
+			LoadAssemblies (185ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (550ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (546ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (428ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2016.
+Total: 5.938400 ms (FindLiveObjects: 0.224500 ms CreateObjectMapping: 0.072000 ms MarkObjects: 5.602300 ms  DeleteObjects: 0.037600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005063 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.918 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1918ms)
+		BeginReloadAssembly (191ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1608ms)
+			LoadAssemblies (190ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (585ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (556ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (440ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2019.
+Total: 5.623500 ms (FindLiveObjects: 0.249100 ms CreateObjectMapping: 0.094200 ms MarkObjects: 5.238500 ms  DeleteObjects: 0.039900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003063 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.891 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1892ms)
+		BeginReloadAssembly (200ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1554ms)
+			LoadAssemblies (180ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (559ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (550ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (433ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2022.
+Total: 5.472200 ms (FindLiveObjects: 0.250600 ms CreateObjectMapping: 0.093200 ms MarkObjects: 5.083100 ms  DeleteObjects: 0.043600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004508 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.948 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1949ms)
+		BeginReloadAssembly (242ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (74ms)
+		EndReloadAssembly (1587ms)
+			LoadAssemblies (207ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (502ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (568ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (416ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 5.921100 ms (FindLiveObjects: 0.537200 ms CreateObjectMapping: 0.169700 ms MarkObjects: 5.176000 ms  DeleteObjects: 0.036200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003077 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.882 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1883ms)
+		BeginReloadAssembly (176ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1583ms)
+			LoadAssemblies (172ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (544ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (509ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (389ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2028.
+Total: 5.662500 ms (FindLiveObjects: 0.388600 ms CreateObjectMapping: 0.119200 ms MarkObjects: 5.111600 ms  DeleteObjects: 0.040800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003560 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.924 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1925ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (1592ms)
+			LoadAssemblies (183ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (536ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (546ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (416ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2031.
+Total: 5.910900 ms (FindLiveObjects: 0.268600 ms CreateObjectMapping: 0.100100 ms MarkObjects: 5.502700 ms  DeleteObjects: 0.037400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005722 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.765 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1766ms)
+		BeginReloadAssembly (185ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1461ms)
+			LoadAssemblies (169ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (514ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (476ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (360ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.5 MB.
+System memory in use after: 85.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2034.
+Total: 5.639100 ms (FindLiveObjects: 0.265100 ms CreateObjectMapping: 0.073500 ms MarkObjects: 5.263500 ms  DeleteObjects: 0.035000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002033 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Learn\Game-Quest-Puzzle-main\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.849 seconds
+Domain Reload Profiling:
+	ReloadAssembly (849ms)
+		BeginReloadAssembly (99ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (695ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (235ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (233ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (43ms)
+				ProcessInitializeOnLoadAttributes (174ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1528 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.5 MB.
+System memory in use after: 85.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2037.
+Total: 3.607400 ms (FindLiveObjects: 0.208400 ms CreateObjectMapping: 0.063200 ms MarkObjects: 3.310700 ms  DeleteObjects: 0.023700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

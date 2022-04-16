@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 827.3333
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 130
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 62
+  controlID: 42
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 63
+  controlID: 43
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,8 +276,8 @@ MonoBehaviour:
     y: 0
     width: 447.3333
     height: 827.3333
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -516,9 +516,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c610000
-      m_LastClickedID: 24988
-      m_ExpandedIDs: 70fbffff1a4100005c4800006a4a0000245a0000e25e00002a5f00003e600000ca6400009c660000da6a0000a07b0000407e0000fa810000208500005c85000060890000168d0000108e00005a910000fa980000f69c0000f89e000000a1000028a200006aa90000caac000092ad000076ae000008b600001ab70000c4bd0000b4be00009ec5000002ce0000b6d000008ada0000b6e300005c05010048070100a4460100a04d0100e2510100066c0100
+      m_SelectedIDs: ae610000
+      m_LastClickedID: 25006
+      m_ExpandedIDs: 70fbffff5689000042a90000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 0
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.06811544, y: -0.41762173, z: 0.031426407, w: -0.90553355}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -696,22 +696,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Learn\Game-Quest-Puzzle-main
+  m_LastProjectPath: D:\Learn\Game-Quest-Puzzle-main\Game-Quest-Puzzle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e890100
-    m_LastClickedID: 100750
-    m_ExpandedIDs: 000000007089010000ca9a3b
+    m_SelectedIDs: 26890100
+    m_LastClickedID: 100646
+    m_ExpandedIDs: 000000002689010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -739,7 +739,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070890100
+    m_ExpandedIDs: 0000000026890100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
