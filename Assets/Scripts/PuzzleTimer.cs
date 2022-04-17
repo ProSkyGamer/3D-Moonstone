@@ -36,7 +36,7 @@ public class PuzzleTimer : MonoBehaviour
                 }
                 seconds = 60;
             }
-            gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + seconds.ToString();
+            gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + Mathf.Round(seconds).ToString();
         }
 
     }
