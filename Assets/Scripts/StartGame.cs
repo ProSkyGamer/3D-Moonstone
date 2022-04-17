@@ -18,6 +18,9 @@ public class StartGame : MonoBehaviour
     public GameObject findsibling_game_interface;
     public GameObject findsibling_interface;
     public GameObject findsibling_rewards;
+    public GameObject followingplates_game_interface;
+    public GameObject followingplates_interface;
+    public GameObject followingplates_rewards;
 
     void Start()
     {
@@ -78,6 +81,8 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
         PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
 
+        plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
+
         plates_rewards.SetActive(true);
         plates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
         plates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
@@ -127,6 +132,7 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
         PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
         PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+        findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         findsibling_rewards.SetActive(true);
         findsibling_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
@@ -158,6 +164,15 @@ public class StartGame : MonoBehaviour
 
                 UpadteInfo();
             }
+            else if (game == "followingplates")
+            {
+                _interface.SetActive(true);
+                followingplates_rewards.SetActive(false);
+                followingplates_game_interface.SetActive(false);
+                swiping.SetActive(true);
+
+                UpadteInfo();
+            }
         }
     }
 
@@ -175,14 +190,45 @@ public class StartGame : MonoBehaviour
         UpadteInfo();
     }
 
-    public void StartGameFollowingPuzzle()
+    public void StartGameFollowingPlates()
     {
-        for(int i =1;i<=6;i++)
+        if (PlayerPrefs.GetInt("lives") > 0)
         {
-            PlayerPrefs.SetInt("followingplate" + i, Random.Range(1, 6));
+            LivesCountMinus();
+            followingplates_interface.SetActive(false);
+            followingplates_game_interface.SetActive(true);
+            followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
+            for (int i = 1; i <= 6; i++)
+            {
+                PlayerPrefs.SetInt("followingplate" + i, Random.Range(1, 6));
+            }
+            PlayerPrefs.SetInt("following_puzzle_stage", 1);
+            followingplates_game_interface.GetComponentInChildren<FollowingPuzzleScript>().StartGame();
         }
-        PlayerPrefs.SetInt("following_puzzle_stage", 1);
+    }
 
+    public void AfterGameFollowingPlates()
+    {
+        int exp = 10;
+        int coins = Random.Range(10, 20);
 
+        PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+        followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
+
+        followingplates_rewards.SetActive(true);
+        followingplates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
+        followingplates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
+
+        need = true;
+        game = "followingplates";
+    }
+
+    public void LoseGameFollowingPlates()
+    {
+        _interface.SetActive(true);
+        followingplates_game_interface.SetActive(false);
+        UpadteInfo();
     }
 }

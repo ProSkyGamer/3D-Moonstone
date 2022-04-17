@@ -31,6 +31,8 @@ public class PuzzleTimer : MonoBehaviour
                         controller.GetComponent<StartGame>().LoseGamePlates();
                     else if (game_name == "findsibling")
                         controller.GetComponent<StartGame>().LoseGameFindSibling();
+                    else if (game_name == "followingplates")
+                        controller.GetComponent<StartGame>().LoseGameFollowingPlates();
                 }
                 seconds = 60;
             }

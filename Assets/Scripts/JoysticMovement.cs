@@ -21,21 +21,25 @@ public class JoysticMovement : MonoBehaviour
         {
             if (transform.position.x > 50)
             {
+                coord = transform.position;
                 coord.x = 50;
                 transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
             }
             if (transform.position.x < 10)
             {
+                coord = transform.position;
                 coord.x = 10;
                 transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
             }
             if (transform.position.z > 50)
             {
+                coord = transform.position;
                 coord.z = 50;
                 transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
             }
             if (transform.position.z < 10)
             {
+                coord = transform.position;
                 coord.z = 10;
                 transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
             }
