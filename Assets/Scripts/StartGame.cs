@@ -39,7 +39,7 @@ public class StartGame : MonoBehaviour
         int max_exp = PlayerPrefs.GetInt("max_experience");
 
 
-        print(Screen.width + " " + Screen.height);
+
 
 
         coins_int.text = System.Convert.ToString(coins);
