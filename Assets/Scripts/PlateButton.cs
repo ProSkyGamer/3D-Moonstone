@@ -85,23 +85,23 @@ public class PlateButton : MonoBehaviour
         if (i != ii)
             if (i > ii)
             {
-                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y + 185);//up
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y + Screen.width * 3 / 21.5f);//up
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved,new_coords);
             }
             else
             { 
-                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y - 185);//down
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x, moved.GetComponent<Transform>().transform.position.y - Screen.width * 3 / 21.5f);//down
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
         else if (j != jj)
             if (j > jj)
             { 
-                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x - 185, moved.GetComponent<Transform>().transform.position.y);//left
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x - Screen.width * 3 / 21.5f, moved.GetComponent<Transform>().transform.position.y);//left
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
             else
             { 
-                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x + 185, moved.GetComponent<Transform>().transform.position.y);//right
+                new_coords = new Vector2(moved.GetComponent<Transform>().transform.position.x + Screen.width * 3 / 21.5f, moved.GetComponent<Transform>().transform.position.y);//right
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
     }
