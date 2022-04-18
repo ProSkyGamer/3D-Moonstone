@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResetGameFindSibling : MonoBehaviour
 {
 
     private int[] list = new int[13];
+    public Texture[] images = new Texture[13];
     public GameObject plate1;
     public GameObject plate2;
     public GameObject plate3;
@@ -53,7 +55,7 @@ public class ResetGameFindSibling : MonoBehaviour
         plates_massiv[10] = plate10;
 
         plates_massiv[11] = plate11;
-        plates_massiv[12] = plate11;
+        plates_massiv[12] = plate12;
         plates_massiv[14] = plate14;
         plates_massiv[15] = plate15;
 
@@ -99,6 +101,7 @@ public class ResetGameFindSibling : MonoBehaviour
                     if (list[number] < 2)
                     {
                         list[number] += 1;
+                        plates_massiv[i].transform.parent.GetComponent<RawImage>().texture = images[number];
                         plates_massiv[i].GetComponent<FindSiblingButton>().type = number.ToString();
                         need = false;
                     }

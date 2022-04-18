@@ -6,9 +6,9 @@ public class FindSiblingButton : MonoBehaviour
 {
     public string type;
     private GameObject controller;
-    private bool need;
+    private int need;
     private GameObject sibling;
-    private float timer=1f;
+    private float timer=0.75f;
 
 
     private void Start()
@@ -19,9 +19,9 @@ public class FindSiblingButton : MonoBehaviour
     }
     public void OnClickSibling()
     {
-        if (!need)
+        if(PlayerPrefs.GetInt("need_findsibling")==0)
         {
-            if (PlayerPrefs.GetString("sibling") == "x")
+            if(PlayerPrefs.GetString("sibling") == "x")
             {
                 PlayerPrefs.SetString("sibling", type);
                 PlayerPrefs.SetString("sibling_name", gameObject.name);
@@ -47,7 +47,8 @@ public class FindSiblingButton : MonoBehaviour
                 else
                 {
                     gameObject.transform.position = new Vector3(transform.position.x - 2000, transform.position.y, transform.position.z);
-                    need = true;
+                    PlayerPrefs.SetInt("need_findsibling", 1);
+                    need = 1;
                     PlayerPrefs.SetString("sibling", "x");
                     PlayerPrefs.SetString("sibling_name", "");
                 }
@@ -58,16 +59,18 @@ public class FindSiblingButton : MonoBehaviour
 
     private void Update()
     {
-        if(need)
+        if(PlayerPrefs.GetInt("need_findsibling")==1 && need==1)
         {
             timer -= Time.deltaTime;
             if(timer<=0)
             {
-                timer = 1f;
-                need = false;
+                timer = 0.75f;
+                
 
                 gameObject.transform.position = new Vector3(transform.position.x + 2000, transform.position.y, transform.position.z);
                 sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
+                PlayerPrefs.SetInt("need_findsibling", 0);
+                need = 0;
             }
         }
     }

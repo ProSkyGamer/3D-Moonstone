@@ -6,15 +6,10 @@ using UnityEngine.UI;
 public class PuzzleTimer : MonoBehaviour
 {
     public int start_minutes;
+    [Range(0,59)] public int start_seconds;
     public string game_name;
     private int minutes;
-    private float seconds;
-
-    void Start()
-    {
-        minutes = start_minutes;
-        gameObject.GetComponent<Text>().text = (minutes - 1).ToString() + ":60"; 
-    }
+    public float seconds;
 
     void Update()
     {
@@ -36,14 +31,22 @@ public class PuzzleTimer : MonoBehaviour
                 }
                 seconds = 60;
             }
-            gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + Mathf.Round(seconds).ToString();
+            if(seconds<=9.5 && seconds>=0.2)
+                gameObject.GetComponent<Text>().text = minutes.ToString() + ":0" + Mathf.Round(seconds).ToString();
+            else
+                gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + Mathf.Round(seconds).ToString();
         }
 
     }
     public void OnStart()
     {
         minutes = start_minutes;
-        seconds = 0;
-        gameObject.GetComponent<Text>().text = (minutes - 1).ToString() + ":60";
+        seconds = start_seconds;
+        if(start_seconds<10 && start_seconds>0)
+            gameObject.GetComponent<Text>().text = minutes.ToString() + ":0"+start_seconds;
+        else if(start_seconds==0)
+            gameObject.GetComponent<Text>().text = (minutes-1).ToString() + ":60";
+        else
+            gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + start_seconds;
     }
 }

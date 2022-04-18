@@ -121,6 +121,7 @@ public class StartGame : MonoBehaviour
             findsibling_game_interface.GetComponentInChildren<ResetGameFindSibling>().onStart();
             PlayerPrefs.SetInt("sibling_pairs", 0);
             PlayerPrefs.SetString("sibling", "x");
+            PlayerPrefs.SetInt("need_findsibling", 0);
             findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
         }
     }

@@ -54,7 +54,10 @@ public class LivesTimer : MonoBehaviour
                 }
                 else
                     PlayerPrefs.SetFloat("timer_lives_seconds", Mathf.Round(seconds));
-                livesTimer.text = minutes.ToString() + ":" + Mathf.Round(seconds).ToString();
+                if (seconds <= 9.5 && seconds >= 0.2)
+                    livesTimer.text = minutes.ToString() + ":0" + Mathf.Round(seconds).ToString();
+                else
+                    livesTimer.text = minutes.ToString() + ":" + Mathf.Round(seconds).ToString();
 
             }
         }
