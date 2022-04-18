@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ResetGameFindSibling : MonoBehaviour
 {
+
+    private int[] list = new int[13];
     public GameObject plate1;
     public GameObject plate2;
     public GameObject plate3;
@@ -32,36 +34,76 @@ public class ResetGameFindSibling : MonoBehaviour
     public GameObject plate23;
     public GameObject plate24;
     public GameObject plate25;
-    
+
+    public GameObject[] plates_massiv = new GameObject[26];
+
+
+    private void Start()
+    {
+        plates_massiv[1] = plate1;
+        plates_massiv[2] = plate2;
+        plates_massiv[3] = plate3;
+        plates_massiv[4] = plate4;
+        plates_massiv[5] = plate5;
+
+        plates_massiv[6] = plate6;
+        plates_massiv[7] = plate7;
+        plates_massiv[8] = plate8;
+        plates_massiv[9] = plate9;
+        plates_massiv[10] = plate10;
+
+        plates_massiv[11] = plate11;
+        plates_massiv[12] = plate11;
+        plates_massiv[14] = plate14;
+        plates_massiv[15] = plate15;
+
+        plates_massiv[16] = plate16;
+        plates_massiv[17] = plate17;
+        plates_massiv[18] = plate18;
+        plates_massiv[19] = plate19;
+        plates_massiv[20] = plate20;
+
+        plates_massiv[21] = plate21;
+        plates_massiv[22] = plate22;
+        plates_massiv[23] = plate23;
+        plates_massiv[24] = plate24;
+        plates_massiv[25] = plate25;
+    }
     public void ResetFindSibling()
     {
-        plate1.SetActive(true);
-        plate2.SetActive(true);
-        plate3.SetActive(true);
-        plate4.SetActive(true);
-        plate5.SetActive(true);
+        for(int i=1;i<=25;i++)
+        {
+            if (i != 13)
+            {
+                plates_massiv[i].SetActive(true);
+            }
+        }
+    }
 
-        plate6.SetActive(true);
-        plate7.SetActive(true);
-        plate8.SetActive(true);
-        plate9.SetActive(true);
-        plate10.SetActive(true);
-
-        plate11.SetActive(true);
-        plate12.SetActive(true);
-        plate14.SetActive(true);
-        plate15.SetActive(true);
-
-        plate16.SetActive(true);
-        plate17.SetActive(true);
-        plate18.SetActive(true);
-        plate19.SetActive(true);
-        plate20.SetActive(true);
-
-        plate21.SetActive(true);
-        plate22.SetActive(true);
-        plate23.SetActive(true);
-        plate24.SetActive(true);
-        plate25.SetActive(true);
+    public void onStart()
+    {
+        Start();
+        for(int i=0;i<=12;i++)
+        {
+            list[i] = 0;
+        }
+        ResetFindSibling();
+        for(int i = 1;i<=25;i++)
+        {
+            if (i != 13)
+            {
+                bool need = true;
+                while (need)
+                {
+                    int number = Random.Range(1, 13);
+                    if (list[number] < 2)
+                    {
+                        list[number] += 1;
+                        plates_massiv[i].GetComponent<FindSiblingButton>().type = number.ToString();
+                        need = false;
+                    }
+                }
+            }
+        }
     }
 }

@@ -98,6 +98,8 @@ public class StartGame : MonoBehaviour
             LivesCountMinus();
             plates_interface.SetActive(false);
             plates_game_interface.SetActive(true);
+            plates_game_interface.GetComponentInChildren<PlatesPuzzle>().onStart();
+            plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             plates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
         }
     }
@@ -116,6 +118,7 @@ public class StartGame : MonoBehaviour
             LivesCountMinus();
             findsibling_interface.SetActive(false);
             findsibling_game_interface.SetActive(true);
+            findsibling_game_interface.GetComponentInChildren<ResetGameFindSibling>().onStart();
             PlayerPrefs.SetInt("sibling_pairs", 0);
             PlayerPrefs.SetString("sibling", "x");
             findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
@@ -140,6 +143,13 @@ public class StartGame : MonoBehaviour
 
         need = true;
         game = "findsibling";
+    }
+    
+    public void LoseGameFindSibling()
+    {
+        _interface.SetActive(true);
+        findsibling_game_interface.SetActive(false);
+        UpadteInfo();
     }
 
     private void Update()
@@ -173,16 +183,12 @@ public class StartGame : MonoBehaviour
 
                 UpadteInfo();
             }
+            need = false;
         }
     }
 
 
-    public void LoseGameFindSibling()
-    {
-        _interface.SetActive(true);
-        findsibling_game_interface.SetActive(false);
-        UpadteInfo();
-    }
+    
 
     public void AddLives()
     {
@@ -197,6 +203,7 @@ public class StartGame : MonoBehaviour
             LivesCountMinus();
             followingplates_interface.SetActive(false);
             followingplates_game_interface.SetActive(true);
+            followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
             for (int i = 1; i <= 6; i++)
             {

@@ -41,8 +41,6 @@ public class FindSiblingButton : MonoBehaviour
                     PlayerPrefs.SetString("sibling_name", "");
                     if (PlayerPrefs.GetInt("sibling_pairs") == 12)
                     {
-                        GameObject new_controller = GameObject.Find("FindSibling Script");
-                        new_controller.GetComponent<ResetGameFindSibling>().ResetFindSibling();
                         controller.GetComponent<StartGame>().AfterGameFindSibling();
                     }
                 }
