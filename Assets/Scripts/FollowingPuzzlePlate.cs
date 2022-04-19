@@ -34,6 +34,7 @@ public class FollowingPuzzlePlate : MonoBehaviour
         else
         {
             ResetStage();
+            FollowingScript.GetComponent<FollowingPuzzleScript>().ShowPlates();
         }
     }
 

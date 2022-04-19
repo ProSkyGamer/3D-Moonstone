@@ -6,6 +6,8 @@ ScriptsOnlyBuild:
     - ClickEvent
     - FindSiblingButton
     - FixedJoystick
+    - FollowingPuzzlePlate
+    - FollowingPuzzleScript
     - JoysticMovement
     - LivesTimer
     - Outline
@@ -76,51 +78,55 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1478}
+      Script: {instanceID: 1440}
     - Class: 114
-      Script: {instanceID: 1490}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1956}
+      Script: {instanceID: 1908}
     - Class: 114
-      Script: {instanceID: 2008}
+      Script: {instanceID: 1944}
     - Class: 114
-      Script: {instanceID: 2034}
+      Script: {instanceID: 1968}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2022}
+    - Class: 114
+      Script: {instanceID: 2048}
     - Class: 114
       Script: {instanceID: 2132}
     - Class: 114
-      Script: {instanceID: 2262}
+      Script: {instanceID: 2148}
     - Class: 114
-      Script: {instanceID: 2300}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 2412}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2578}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 2850}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3162}
+      Script: {instanceID: 2874}
     - Class: 114
-      Script: {instanceID: 3736}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 4064}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 100686}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 101360}
+      Script: {instanceID: 4382}
+    - Class: 114
+      Script: {instanceID: 4396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,6 +152,18 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 824e8d4cb47ffd88ddf959dbd4526585
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DynamicJoystick
+  - hash:
+      serializedVersion: 2
       Hash: ff7f58b226cfe4de0dc241bd88d5a904
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -158,16 +176,16 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowingPuzzlePlate
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -206,6 +224,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Joystick
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -218,10 +242,16 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: f248a455314e65c2c099eb98281ab6a8
+      Hash: fb88745de06a0e34ee140e37242bd2fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ResetGameFindSibling
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FixedJoystick
   - hash:
       serializedVersion: 2
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
@@ -234,6 +264,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9dac16f3efc511835ac976dfae55f580
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VariableJoystick
   - hash:
       serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
@@ -254,7 +290,7 @@ ScriptsOnlyBuild:
     className: CameraZoom
   - hash:
       serializedVersion: 2
-      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
+      Hash: 91d258529db2b5060a913f2afcea1a21
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -386,13 +422,19 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 8abea77863af168d3b191dcc8e61384a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowingPuzzleScript
+  - hash:
+      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: fb4becb100ab3098cd4aca5362502a19
+      Hash: 7d915dfb7eceddf4254e912902c06a89
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleTimer
@@ -458,7 +500,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: c5b91863d3cacfe469d3b329d9495264
+      Hash: e237b3c9b5f5b09eb724c3be15a93d20
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartGame
@@ -510,6 +552,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloatingJoystick
   - hash:
       serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
@@ -596,7 +644,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: df9c77f45e48c001645fbfeaae064808
+      Hash: f1eb836c64ce39813c4b27bb179bffe8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlatesPuzzle
@@ -626,6 +674,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 6c0f9bf04422b9f2a65554654ab6268c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JoysticMovement
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -636,42 +690,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 824e8d4cb47ffd88ddf959dbd4526585
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DynamicJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FloatingJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 9dac16f3efc511835ac976dfae55f580
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VariableJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Joystick
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FixedJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 6c0f9bf04422b9f2a65554654ab6268c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JoysticMovement
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
