@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    private float zoomMin = 30;
-    private float zoomMax = 90;
+    private float zoomMin = 3;
+    private float zoomMax = 10;
 
     void Start()
     {
@@ -14,6 +14,6 @@ public class CameraZoom : MonoBehaviour
 
     private void OnZoom(float increment)
     {
-        Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView - increment, zoomMin, zoomMax);
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomMin, zoomMax);
     }
 }

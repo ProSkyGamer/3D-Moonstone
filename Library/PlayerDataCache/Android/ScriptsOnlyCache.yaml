@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - FollowingPuzzleScript
     - JoysticMovement
     - LivesTimer
+    - LoadGame
     - Outline
     - PlateButton
     - PlatesPuzzle
@@ -42,9 +43,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -80,53 +82,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1440}
     - Class: 114
-      Script: {instanceID: 1476}
+      Script: {instanceID: 1508}
     - Class: 114
-      Script: {instanceID: 1570}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1908}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 1944}
+      Script: {instanceID: 1976}
     - Class: 114
-      Script: {instanceID: 1968}
+      Script: {instanceID: 2000}
     - Class: 114
-      Script: {instanceID: 2022}
+      Script: {instanceID: 2054}
     - Class: 114
-      Script: {instanceID: 2048}
+      Script: {instanceID: 2080}
     - Class: 114
-      Script: {instanceID: 2132}
+      Script: {instanceID: 2164}
     - Class: 114
-      Script: {instanceID: 2148}
+      Script: {instanceID: 2180}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2314}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 2432}
+      Script: {instanceID: 2464}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2722}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2922}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 3220}
     - Class: 114
-      Script: {instanceID: 3764}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 4092}
+      Script: {instanceID: 4124}
     - Class: 114
-      Script: {instanceID: 4382}
+      Script: {instanceID: 4414}
     - Class: 114
-      Script: {instanceID: 4396}
+      Script: {instanceID: 4428}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -142,6 +144,61 @@ ScriptsOnlyBuild:
     - Class: 213
       Script: {instanceID: 0}
     - Class: 218
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LoadScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1440}
+    - Class: 114
+      Script: {instanceID: 1676}
+    - Class: 114
+      Script: {instanceID: 2054}
+    - Class: 114
+      Script: {instanceID: 2180}
+    - Class: 114
+      Script: {instanceID: 2352}
+    - Class: 114
+      Script: {instanceID: 2464}
+    - Class: 114
+      Script: {instanceID: 2630}
+    - Class: 114
+      Script: {instanceID: 2816}
+    - Class: 114
+      Script: {instanceID: 186174}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -690,7 +747,14 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: efbae3de7a8f54307ba4ace1ad6bf79c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadGame
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/LoadScreen.unity
+  - Assets/Scenes/Game.unity
   playerPath: C:/Users/User/Desktop/DSTU/Unity/Game-Quest-Puzzle.apk
