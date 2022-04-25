@@ -42,6 +42,7 @@ public class PlatesPuzzle : MonoBehaviour
     private int j;
     private int temp=0;
     private bool move;
+    private float screen_move = Screen.width * 3 / 24f;
 
     private void Start()
     {
@@ -59,79 +60,79 @@ public class PlatesPuzzle : MonoBehaviour
             plate1.transform.position = Cplate1.transform.position;
 
             puzzleobj[0, 1] = plate9;
-            plate9.transform.position = new Vector2(Cplate9.transform.position.x - Screen.width * 3 / 21.6f, Cplate9.transform.position.y + Screen.width * 6 / 21.6f);
+            plate9.transform.position = new Vector2(Cplate9.transform.position.x - screen_move, Cplate9.transform.position.y + 2 * screen_move);
 
             puzzleobj[0, 2] = plate4;
-            plate4.transform.position = new Vector2(Cplate4.transform.position.x + Screen.width * 6 / 21.6f, Cplate4.transform.position.y + Screen.width * 3 / 21.6f);
+            plate4.transform.position = new Vector2(Cplate4.transform.position.x + 2 * screen_move, Cplate4.transform.position.y + screen_move);
 
             puzzleobj[1, 1] = plate7;
-            plate7.transform.position = new Vector2(Cplate7.transform.position.x + Screen.width * 3 / 21.6f, Cplate7.transform.position.y + Screen.width * 3 / 21.6f);
+            plate7.transform.position = new Vector2(Cplate7.transform.position.x + screen_move, Cplate7.transform.position.y + screen_move);
 
             puzzleobj[1, 2] = plate6;
             plate6.transform.position = Cplate6.transform.position;
 
             puzzleobj[2, 0] = plate8;
-            plate8.transform.position = new Vector2(Cplate8.transform.position.x - Screen.width * 3 / 21.6f, Cplate8.transform.position.y);
+            plate8.transform.position = new Vector2(Cplate8.transform.position.x - screen_move, Cplate8.transform.position.y);
 
             puzzleobj[2, 1] = plate3;
-            plate3.transform.position = new Vector2(Cplate3.transform.position.x - Screen.width * 3 / 21.6f, Cplate3.transform.position.y - Screen.width * 6 / 21.6f);
+            plate3.transform.position = new Vector2(Cplate3.transform.position.x - screen_move, Cplate3.transform.position.y - 2 * screen_move);
 
             puzzleobj[2, 2] = plate2;
-            plate2.transform.position = new Vector2(Cplate2.transform.position.x + Screen.width * 3 / 21.6f, Cplate2.transform.position.y - Screen.width * 6 / 21.6f);
+            plate2.transform.position = new Vector2(Cplate2.transform.position.x + screen_move, Cplate2.transform.position.y - 2 * screen_move);
 
         }
         else if (puzzle_var == 2)
         {
             puzzleobj[0, 0] = plate3;
-            plate3.transform.position = new Vector2(Cplate3.transform.position.x - Screen.width * 6 / 21.6f, Cplate3.transform.position.y);
+            plate3.transform.position = new Vector2(Cplate3.transform.position.x - 2 * screen_move, Cplate3.transform.position.y);
 
             puzzleobj[0, 1] = plate9;
-            plate9.transform.position = new Vector2(Cplate9.transform.position.x - Screen.width * 3 / 21.6f, Cplate9.transform.position.y + Screen.width * 6 / 21.6f);
+            plate9.transform.position = new Vector2(Cplate9.transform.position.x - screen_move, Cplate9.transform.position.y + 2 * screen_move);
 
             puzzleobj[0, 2] = plate7;
-            plate7.transform.position = new Vector2(Cplate7.transform.position.x + Screen.width * 6 / 21.6f, Cplate7.transform.position.y + Screen.width * 6 / 21.6f);
+            plate7.transform.position = new Vector2(Cplate7.transform.position.x + 2 * screen_move, Cplate7.transform.position.y + 2 * screen_move);
 
             puzzleobj[1, 0] = plate4;
             plate4.transform.position = Cplate4.transform.position;
 
             puzzleobj[1, 1] = plate1;
-            plate1.transform.position = new Vector2(Cplate1.transform.position.x + Screen.width * 3 / 21.6f, Cplate1.transform.position.y - Screen.width * 3 / 21.6f);
+            plate1.transform.position = new Vector2(Cplate1.transform.position.x + screen_move, Cplate1.transform.position.y - screen_move);
 
             puzzleobj[2, 0] = plate8;
-            plate8.transform.position = new Vector2(Cplate8.transform.position.x - Screen.width * 3 / 21.6f, Cplate8.transform.position.y);
+            plate8.transform.position = new Vector2(Cplate8.transform.position.x - screen_move, Cplate8.transform.position.y);
 
             puzzleobj[2, 1] = plate2;
-            plate2.transform.position = new Vector2(Cplate2.transform.position.x, Cplate2.transform.position.y - Screen.width * 6 / 21.6f);
+            plate2.transform.position = new Vector2(Cplate2.transform.position.x, Cplate2.transform.position.y - 2 * screen_move);
 
             puzzleobj[2, 2] = plate6;
-            plate6.transform.position = new Vector2(Cplate6.transform.position.x, Cplate6.transform.position.y - Screen.width * 3 / 21.6f);
+            plate6.transform.position = new Vector2(Cplate6.transform.position.x, Cplate6.transform.position.y - screen_move);
 
         }
         else
         {
             puzzleobj[0, 0] = plate6;
-            plate6.transform.position = new Vector2(Cplate6.transform.position.x - Screen.width * 6 / 21.6f, Cplate6.transform.position.y + Screen.width * 3 / 21.6f);
+            plate6.transform.position = new Vector2(Cplate6.transform.position.x - 2 * screen_move, Cplate6.transform.position.y + screen_move);
 
             puzzleobj[0, 1] = plate4;
-            plate4.transform.position = new Vector2(Cplate4.transform.position.x + Screen.width * 3 / 21.6f, Cplate4.transform.position.y + Screen.width * 3 / 21.6f);
+            plate4.transform.position = new Vector2(Cplate4.transform.position.x + screen_move, Cplate4.transform.position.y + screen_move);
 
             puzzleobj[0, 2] = plate7;
-            plate7.transform.position = new Vector2(Cplate7.transform.position.x + Screen.width * 6 / 21.6f, Cplate7.transform.position.y + Screen.width * 6 / 21.6f);
+            plate7.transform.position = new Vector2(Cplate7.transform.position.x + 2 * screen_move, Cplate7.transform.position.y + 2 * screen_move);
 
             puzzleobj[1, 0] = plate9;
-            plate9.transform.position = new Vector2(Cplate9.transform.position.x - Screen.width * 6 / 21.6f, Cplate9.transform.position.y + Screen.width * 3 / 21.6f);
+            plate9.transform.position = new Vector2(Cplate9.transform.position.x - 2 * screen_move, Cplate9.transform.position.y + screen_move);
 
             puzzleobj[1, 2] = plate1;
-            plate1.transform.position = new Vector2(Cplate1.transform.position.x + Screen.width * 6 / 21.6f, Cplate1.transform.position.y - Screen.width * 3 / 21.6f);
+            plate1.transform.position = new Vector2(Cplate1.transform.position.x + 2 * screen_move, Cplate1.transform.position.y - screen_move);
 
             puzzleobj[2, 0] = plate8;
-            plate8.transform.position = new Vector2(Cplate8.transform.position.x - Screen.width * 3 / 21.6f, Cplate8.transform.position.y);
+            plate8.transform.position = new Vector2(Cplate8.transform.position.x - screen_move, Cplate8.transform.position.y);
 
             puzzleobj[2, 1] = plate2;
-            plate2.transform.position = new Vector2(Cplate2.transform.position.x, Cplate2.transform.position.y - Screen.width * 6 / 21.6f);
+            plate2.transform.position = new Vector2(Cplate2.transform.position.x, Cplate2.transform.position.y - 2 * screen_move);
 
             puzzleobj[2, 2] = plate3;
-            plate3.transform.position = new Vector2(Cplate3.transform.position.x, Cplate3.transform.position.y - Screen.width * 6 / 21.6f);
+            plate3.transform.position = new Vector2(Cplate3.transform.position.x, Cplate3.transform.position.y - 2 * screen_move);
 
         }
         foreach(GameObject g in puzzleobj)

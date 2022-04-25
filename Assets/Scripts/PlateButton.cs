@@ -21,6 +21,8 @@ public class PlateButton : MonoBehaviour
     private bool down;
     private bool ismove=false;
 
+    private float screen_move = Screen.width * 3 / 24f;
+
     public void onStart()
     {
         controller = GameObject.Find("Plates Puzzle Script");
@@ -134,23 +136,23 @@ public class PlateButton : MonoBehaviour
         if (i != ii)
             if (i > ii)
             {
-                new_coords = new Vector2(moved.transform.position.x, moved.transform.position.y + Screen.width * 3 / 21.6f);//up
+                new_coords = new Vector2(moved.transform.position.x, moved.transform.position.y + screen_move);//up
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved,new_coords);
             }
             else
             { 
-                new_coords = new Vector2(moved.transform.position.x, moved.transform.position.y - Screen.width * 3 / 21.6f);//down
+                new_coords = new Vector2(moved.transform.position.x, moved.transform.position.y - screen_move);//down
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
         else if (j != jj)
             if (j > jj)
             { 
-                new_coords = new Vector2(moved.transform.position.x - Screen.width * 3 / 21.6f, moved.transform.position.y);//left
+                new_coords = new Vector2(moved.transform.position.x - screen_move, moved.transform.position.y);//left
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
             else
             { 
-                new_coords = new Vector2(moved.transform.position.x + Screen.width * 3 / 21.6f, moved.transform.position.y);//right
+                new_coords = new Vector2(moved.transform.position.x + screen_move, moved.transform.position.y);//right
                 controller.GetComponent<PlatesPuzzle>().PlateMoving(moved, new_coords);
             }
     }
