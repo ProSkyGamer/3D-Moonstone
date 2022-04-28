@@ -7,6 +7,7 @@ public class ResetGameFindSibling : MonoBehaviour
 {
 
     private int[] list = new int[13];
+    private GameObject controller;
     public Texture[] images = new Texture[13];
     public GameObject plate1;
     public GameObject plate2;
@@ -70,6 +71,8 @@ public class ResetGameFindSibling : MonoBehaviour
         plates_massiv[23] = plate23;
         plates_massiv[24] = plate24;
         plates_massiv[25] = plate25;
+
+        controller = GameObject.Find("Interface Main");
     }
     public void ResetFindSibling()
     {
@@ -108,5 +111,10 @@ public class ResetGameFindSibling : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void UsedSolveItem()
+    {
+        controller.GetComponent<StartGame>().AfterGameFindSibling();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FollowingPuzzleScript : MonoBehaviour
 {
+    private GameObject controller;
     private int stage;
     private int curr_show;
     private bool need_show;
@@ -31,6 +32,7 @@ public class FollowingPuzzleScript : MonoBehaviour
 
     public void StartGame()
     {
+        controller = GameObject.Find("Interface Main");
         for (int i = 1; i <= 6; i++)
         {
             followingplates[i] = PlayerPrefs.GetInt("followingplate" + i);
@@ -119,5 +121,10 @@ public class FollowingPuzzleScript : MonoBehaviour
         ShowingPlate4.GetComponent<RawImage>().color = PlateNull;
         ShowingPlate5.GetComponent<RawImage>().color = PlateNull;
         ShowingPlate6.GetComponent<RawImage>().color = PlateNull;
+    }
+
+    public void UsedSolveItem()
+    {
+        controller.GetComponent<StartGame>().AfterGameFollowingPlates();
     }
 }

@@ -31,8 +31,7 @@ public class PlatesPuzzle : MonoBehaviour
     private Vector3 coord_obj_to_move;
 
     private GameObject controller;
-    private Text not_move;
-    private Color color_not;
+    private GameObject not_move;
     private float time = 0.05f;
 
     private int puzzle_var;
@@ -46,9 +45,8 @@ public class PlatesPuzzle : MonoBehaviour
 
     private void Start()
     {
-        not_move = GameObject.Find("Not Move").GetComponent<Text>();
-        color_not = not_move.color;
-        not_move.gameObject.SetActive(false);
+        controller = GameObject.Find("Interface Main");
+        not_move = GameObject.Find("Not Move");
     }
     public void onStart()
     {
@@ -148,7 +146,6 @@ public class PlatesPuzzle : MonoBehaviour
             puzzleobj[1,0]==plate4 && puzzleobj[1,2]==plate6 &&
             puzzleobj[2,0]==plate7 && puzzleobj[2,1]==plate8 && puzzleobj[2, 2] == plate9)
         {
-            controller = GameObject.Find("Interface Main");
             controller.GetComponent<StartGame>().AfterGamePlates();
         }
     }
@@ -161,9 +158,8 @@ public class PlatesPuzzle : MonoBehaviour
 
     public void CantMove()
     {
-        not_move.gameObject.SetActive(true);
-        color_not.a = 1;
-        not_move.color = color_not;
+        not_move.SetActive(true);
+        not_move.GetComponent<TextDissapear>().OnceMore();
     }
     public void InstantMove()
     {
@@ -187,20 +183,11 @@ public class PlatesPuzzle : MonoBehaviour
                     temp = 0;
                     obj_for_move.GetComponent<Transform>().transform.position = coord_obj_to_move;
                 }
-            if (color_not.a > 0)
-            {
-                time -= Time.deltaTime;
-                if (time <= 0)
-                {
-                    time = 0.05f;
-                    color_not.a = not_move.color.a - 0.09f;
-                    not_move.color = color_not;
-                    if (not_move.color.a <= 0)
-                    {
-                        not_move.gameObject.SetActive(false);
-                    }
-                }
-            }
         }
+    }
+
+    public void UsedSolveItem()
+    {
+        controller.GetComponent<StartGame>().AfterGamePlates();
     }
 }

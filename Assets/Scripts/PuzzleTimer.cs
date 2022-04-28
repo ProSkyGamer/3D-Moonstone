@@ -49,4 +49,10 @@ public class PuzzleTimer : MonoBehaviour
         else
             gameObject.GetComponent<Text>().text = minutes.ToString() + ":" + start_seconds;
     }
+
+    public void AddTime(int addedtimeminutes)
+    {
+        minutes += addedtimeminutes;
+        //Минус один предмет
+    }
 }
