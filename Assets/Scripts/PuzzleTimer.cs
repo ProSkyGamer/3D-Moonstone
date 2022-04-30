@@ -11,6 +11,7 @@ public class PuzzleTimer : MonoBehaviour
     private int minutes;
     public float seconds;
 
+
     void Update()
     {
         if (gameObject.activeSelf == true)
@@ -53,6 +54,17 @@ public class PuzzleTimer : MonoBehaviour
     public void AddTime(int addedtimeminutes)
     {
         minutes += addedtimeminutes;
-        //Минус один предмет
+        if(addedtimeminutes==1)
+        {
+            PlayerPrefs.SetInt("magic_item_add_time_weak", PlayerPrefs.GetInt("magic_item_add_time_weak") - 1);
+        }
+        else if(addedtimeminutes==2)
+        {
+            PlayerPrefs.SetInt("magic_item_add_time_middle", PlayerPrefs.GetInt("magic_item_add_time_middle") - 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("magic_item_add_time_high", PlayerPrefs.GetInt("magic_item_add_time_high") - 1);
+        }
     }
 }

@@ -28,12 +28,18 @@ public class FollowingPuzzleScript : MonoBehaviour
     [SerializeField] private Color Plate5;
     [SerializeField] private Color Plate6;
     [SerializeField] private Color PlateNull;
+
+    [SerializeField] private GameObject int_text_solve_puzzle;
+    [SerializeField] private GameObject int_text_add_time_weak;
+    [SerializeField] private GameObject int_text_add_time_middle;
+    [SerializeField] private GameObject int_text_add_time_high;
     //Показ нужных плиток
 
     public void StartGame()
     {
+        UpdateMagicItemQuantity();
         controller = GameObject.Find("Interface Main");
-        for (int i = 1; i <= 6; i++)
+        for (int i = 1; i <= 9; i++)
         {
             followingplates[i] = PlayerPrefs.GetInt("followingplate" + i);
         }
@@ -126,5 +132,15 @@ public class FollowingPuzzleScript : MonoBehaviour
     public void UsedSolveItem()
     {
         controller.GetComponent<StartGame>().AfterGameFollowingPlates();
+        PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle") - 1);
+        UpdateMagicItemQuantity();
+    }
+
+    public void UpdateMagicItemQuantity()
+    {
+        int_text_solve_puzzle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_solve_2d_puzzle").ToString();
+        int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
+        int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
+        int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
     }
 }

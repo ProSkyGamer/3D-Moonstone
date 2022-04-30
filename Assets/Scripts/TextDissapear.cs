@@ -13,20 +13,20 @@ public class TextDissapear : MonoBehaviour
     }
     void Update()
     {
-        if(gameObject.activeSelf)
+        if (gameObject.activeSelf)
         {
             standart_color.a = gameObject.GetComponent<Text>().color.a - dis_per_upd;
             gameObject.GetComponent<Text>().color = standart_color;
-            if(gameObject.GetComponent<Text>().color.a<=0)
+            if (gameObject.GetComponent<Text>().color.a <= 0)
             {
                 standart_color.a = 1;
                 gameObject.GetComponent<Text>().color = standart_color;
                 gameObject.SetActive(false);
             }
-            
+
         }
     }
-     public void OnceMore()
+    public void OnceMore()
     {
         standart_color.a = 1;
         gameObject.GetComponent<Text>().color = standart_color;

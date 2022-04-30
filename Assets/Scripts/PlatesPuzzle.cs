@@ -26,6 +26,11 @@ public class PlatesPuzzle : MonoBehaviour
     public GameObject Cplate8;
     public GameObject Cplate9;
 
+    [SerializeField] private GameObject int_text_solve_puzzle;
+    [SerializeField] private GameObject int_text_add_time_weak;
+    [SerializeField] private GameObject int_text_add_time_middle;
+    [SerializeField] private GameObject int_text_add_time_high;
+
     private GameObject obj_for_move;
 
     private Vector3 coord_obj_to_move;
@@ -50,6 +55,7 @@ public class PlatesPuzzle : MonoBehaviour
     }
     public void onStart()
     {
+        UpdateMagicItemQuantity();
         moved = true;
         puzzle_var = Random.Range(1, 4);
         if (puzzle_var == 1)
@@ -189,5 +195,15 @@ public class PlatesPuzzle : MonoBehaviour
     public void UsedSolveItem()
     {
         controller.GetComponent<StartGame>().AfterGamePlates();
+        PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle") - 1);
+        UpdateMagicItemQuantity();
+    }
+
+    public void UpdateMagicItemQuantity()
+    {
+        int_text_solve_puzzle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_solve_2d_puzzle").ToString();
+        int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
+        int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
+        int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
     }
 }

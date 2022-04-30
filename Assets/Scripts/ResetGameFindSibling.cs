@@ -38,6 +38,11 @@ public class ResetGameFindSibling : MonoBehaviour
     public GameObject plate24;
     public GameObject plate25;
 
+    [SerializeField] private GameObject int_text_solve_puzzle;
+    [SerializeField] private GameObject int_text_add_time_weak;
+    [SerializeField] private GameObject int_text_add_time_middle;
+    [SerializeField] private GameObject int_text_add_time_high;
+
     public GameObject[] plates_massiv = new GameObject[26];
 
 
@@ -76,7 +81,7 @@ public class ResetGameFindSibling : MonoBehaviour
     }
     public void ResetFindSibling()
     {
-        for(int i=1;i<=25;i++)
+        for (int i = 1; i <= 25; i++)
         {
             if (i != 13)
             {
@@ -88,12 +93,13 @@ public class ResetGameFindSibling : MonoBehaviour
     public void onStart()
     {
         Start();
-        for(int i=0;i<=12;i++)
+        UpdateMagicItemQuantity();
+        for (int i = 0; i <= 12; i++)
         {
             list[i] = 0;
         }
         ResetFindSibling();
-        for(int i = 1;i<=25;i++)
+        for (int i = 1; i <= 25; i++)
         {
             if (i != 13)
             {
@@ -116,5 +122,15 @@ public class ResetGameFindSibling : MonoBehaviour
     public void UsedSolveItem()
     {
         controller.GetComponent<StartGame>().AfterGameFindSibling();
+        PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle") - 1);
+        UpdateMagicItemQuantity();
+    }
+
+    public void UpdateMagicItemQuantity()
+    {
+        int_text_solve_puzzle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_solve_2d_puzzle").ToString();
+        int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
+        int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
+        int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
     }
 }

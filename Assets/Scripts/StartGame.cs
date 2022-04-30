@@ -15,12 +15,14 @@ public class StartGame : MonoBehaviour
     public GameObject plates_game_interface;
     public GameObject plates_interface;
     public GameObject plates_rewards;
+    private GameObject plates_rewards_magicitem;
     public GameObject findsibling_game_interface;
     public GameObject findsibling_interface;
     public GameObject findsibling_rewards;
     public GameObject followingplates_game_interface;
     public GameObject followingplates_interface;
     public GameObject followingplates_rewards;
+    private GameObject followingplates_rewards_magicitem;
 
     void Start()
     {
@@ -38,9 +40,10 @@ public class StartGame : MonoBehaviour
         int exp = PlayerPrefs.GetInt("experience");
         int max_exp = PlayerPrefs.GetInt("max_experience");
 
-
-
-
+        /*PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", 5);
+        PlayerPrefs.SetInt("magic_item_add_time_weak", 5);
+        PlayerPrefs.SetInt("magic_item_add_time_middle", 5);
+        PlayerPrefs.SetInt("magic_item_add_time_high", 5);*/
 
         coins_int.text = System.Convert.ToString(coins);
         lives_int.text = System.Convert.ToString(lives);
@@ -74,8 +77,9 @@ public class StartGame : MonoBehaviour
 
     public void AfterGamePlates()
     {
-        int exp = 10;
-        int coins = Random.Range(10, 20);
+        int exp = 20;
+        int coins = Random.Range(15, 30);
+        int item = Random.Range(1, 21);
 
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
         PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
@@ -84,6 +88,14 @@ public class StartGame : MonoBehaviour
         plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         plates_rewards.SetActive(true);
+        if(plates_rewards_magicitem!=null)
+            plates_rewards_magicitem = plates_rewards.transform.Find("Reward MagicItemSolvePuzzle2D").gameObject;
+        if (item==1)
+        {
+            PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle")+1);
+        }
+        else
+            plates_rewards_magicitem.SetActive(false);
         plates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
         plates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
 
@@ -119,6 +131,7 @@ public class StartGame : MonoBehaviour
             findsibling_interface.SetActive(false);
             findsibling_game_interface.SetActive(true);
             findsibling_game_interface.GetComponentInChildren<ResetGameFindSibling>().onStart();
+            findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             PlayerPrefs.SetInt("sibling_pairs", 0);
             PlayerPrefs.SetString("sibling", "x");
             PlayerPrefs.SetInt("need_findsibling", 0);
@@ -145,7 +158,7 @@ public class StartGame : MonoBehaviour
         need = true;
         game = "findsibling";
     }
-    
+
     public void LoseGameFindSibling()
     {
         _interface.SetActive(true);
@@ -189,8 +202,6 @@ public class StartGame : MonoBehaviour
     }
 
 
-    
-
     public void AddLives()
     {
         PlayerPrefs.SetInt("lives", 5);
@@ -205,8 +216,9 @@ public class StartGame : MonoBehaviour
             followingplates_interface.SetActive(false);
             followingplates_game_interface.SetActive(true);
             followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
+            followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= 9; i++)
             {
                 PlayerPrefs.SetInt("followingplate" + i, Random.Range(1, 6));
             }
@@ -217,15 +229,25 @@ public class StartGame : MonoBehaviour
 
     public void AfterGameFollowingPlates()
     {
-        int exp = 10;
-        int coins = Random.Range(10, 20);
+        int exp = 15;
+        int coins = Random.Range(15, 25);
+        int item = Random.Range(1, 51);
 
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
         PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
         PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+
         followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         followingplates_rewards.SetActive(true);
+        if (followingplates_rewards_magicitem != null)
+            followingplates_rewards_magicitem = plates_rewards.transform.Find("Reward MagicItemAddTimeWeak").gameObject;
+        if (item == 1)
+        {
+            PlayerPrefs.SetInt("magic_item_add_time_weak", PlayerPrefs.GetInt("magic_item_add_time_weak") + 1);
+        }
+        else
+            followingplates_rewards_magicitem.SetActive(false);
         followingplates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
         followingplates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
 
