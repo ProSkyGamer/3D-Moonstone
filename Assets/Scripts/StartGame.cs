@@ -24,6 +24,8 @@ public class StartGame : MonoBehaviour
     public GameObject followingplates_rewards;
     private GameObject followingplates_rewards_magicitem;
 
+    [SerializeField] GameObject[] all_dialogues;
+
     void Start()
     {
         if (PlayerPrefs.GetInt("max_experience") == 0)
@@ -49,6 +51,9 @@ public class StartGame : MonoBehaviour
         lives_int.text = System.Convert.ToString(lives);
         exp_int.text = System.Convert.ToString(exp + "/" + max_exp);
 
+        PlayerPrefs.SetInt("dialogues_number",0);
+        if(PlayerPrefs.GetInt("dialogue_number")==0)
+            all_dialogues[0].GetComponent<DialoguesTrigger>().TriggerDialogue();
     }
 
     public void LivesCountMinus()
@@ -56,10 +61,19 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") - 1);
     }
 
+
+    public void StartNextDialogue()
+    {
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("max_experience"));
+        UpadteInfo();
+        //all_dialogues[PlayerPrefs.GetInt("dialogues_number")].GetComponent<DialoguesTrigger>().TriggerDialogue();
+    }
     public void UpadteInfo()
     {
         if (PlayerPrefs.GetInt("experience") >= PlayerPrefs.GetInt("max_experience"))
         {
+            if(PlayerPrefs.GetInt("dialogues_number")<=all_dialogues.Length)
+                all_dialogues[PlayerPrefs.GetInt("dialogues_number")].GetComponent<DialoguesTrigger>().TriggerDialogue();
             PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") - PlayerPrefs.GetInt("max_experience"));
             PlayerPrefs.SetInt("max_experience", PlayerPrefs.GetInt("max_experience") + 100);
         }
