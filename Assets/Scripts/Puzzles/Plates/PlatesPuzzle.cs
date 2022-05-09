@@ -26,17 +26,23 @@ public class PlatesPuzzle : MonoBehaviour
     public GameObject Cplate8;
     public GameObject Cplate9;
 
+    public GameObject Audio_On_Move_Plate;
+    public GameObject Audio_On_Cant_Move_Plate;
+    public GameObject Audio_Use_Add_Time;
+    public GameObject Audio_Use_Solve_Item;
+
     [SerializeField] private GameObject int_text_solve_puzzle;
     [SerializeField] private GameObject int_text_add_time_weak;
     [SerializeField] private GameObject int_text_add_time_middle;
     [SerializeField] private GameObject int_text_add_time_high;
+
+    [SerializeField] private GameObject not_move;
 
     private GameObject obj_for_move;
 
     private Vector3 coord_obj_to_move;
 
     private GameObject controller;
-    private GameObject not_move;
     private float time = 0.05f;
 
     private int puzzle_var;
@@ -51,11 +57,14 @@ public class PlatesPuzzle : MonoBehaviour
     private void Start()
     {
         controller = GameObject.Find("Interface Main");
-        not_move = GameObject.Find("Not Move");
     }
     public void onStart()
     {
         UpdateMagicItemQuantity();
+        Audio_Use_Add_Time.SetActive(false);
+        Audio_Use_Solve_Item.SetActive(false);
+        Audio_On_Move_Plate.SetActive(false);
+        Audio_On_Cant_Move_Plate.SetActive(false);
         moved = true;
         puzzle_var = Random.Range(1, 4);
         if (puzzle_var == 1)
@@ -68,6 +77,8 @@ public class PlatesPuzzle : MonoBehaviour
 
             puzzleobj[0, 2] = plate4;
             plate4.transform.position = new Vector2(Cplate4.transform.position.x + 2 * screen_move, Cplate4.transform.position.y + screen_move);
+
+            puzzleobj[1, 0] = null;
 
             puzzleobj[1, 1] = plate7;
             plate7.transform.position = new Vector2(Cplate7.transform.position.x + screen_move, Cplate7.transform.position.y + screen_move);
@@ -102,6 +113,8 @@ public class PlatesPuzzle : MonoBehaviour
             puzzleobj[1, 1] = plate1;
             plate1.transform.position = new Vector2(Cplate1.transform.position.x + screen_move, Cplate1.transform.position.y - screen_move);
 
+            puzzleobj[1, 2] = null;
+
             puzzleobj[2, 0] = plate8;
             plate8.transform.position = new Vector2(Cplate8.transform.position.x - screen_move, Cplate8.transform.position.y);
 
@@ -125,6 +138,8 @@ public class PlatesPuzzle : MonoBehaviour
 
             puzzleobj[1, 0] = plate9;
             plate9.transform.position = new Vector2(Cplate9.transform.position.x - 2 * screen_move, Cplate9.transform.position.y + screen_move);
+
+            puzzleobj[1, 1] = null;
 
             puzzleobj[1, 2] = plate1;
             plate1.transform.position = new Vector2(Cplate1.transform.position.x + 2 * screen_move, Cplate1.transform.position.y - screen_move);
@@ -160,12 +175,16 @@ public class PlatesPuzzle : MonoBehaviour
         moved = false;
         obj_for_move = to_move;
         coord_obj_to_move = new_coords;
+        Audio_On_Move_Plate.SetActive(false);
+        Audio_On_Move_Plate.SetActive(true);
     }
 
     public void CantMove()
     {
         not_move.SetActive(true);
         not_move.GetComponent<TextDissapear>().OnceMore();
+        Audio_On_Cant_Move_Plate.SetActive(false);
+        Audio_On_Cant_Move_Plate.SetActive(true);
     }
     public void InstantMove()
     {

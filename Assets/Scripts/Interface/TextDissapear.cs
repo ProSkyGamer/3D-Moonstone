@@ -28,6 +28,7 @@ public class TextDissapear : MonoBehaviour
     }
     public void OnceMore()
     {
+        gameObject.SetActive(true);
         standart_color.a = 1;
         gameObject.GetComponent<Text>().color = standart_color;
     }

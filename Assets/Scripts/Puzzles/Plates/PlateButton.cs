@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PlateButton : MonoBehaviour
 {
     private GameObject controller;
-    private Text not_move;
     private Color color_not;
     private float time=0.05f;
     private GameObject[,] puzzleobj;

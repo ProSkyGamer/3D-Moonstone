@@ -6,6 +6,7 @@ public class FindSiblingButton : MonoBehaviour
 {
     public string type;
     private GameObject controller;
+    private GameObject puzzle_script;
     private int need;
     private GameObject sibling;
     private float timer=0.75f;
@@ -13,6 +14,7 @@ public class FindSiblingButton : MonoBehaviour
 
     private void Start()
     {
+        puzzle_script = GameObject.Find("FindSibling Script");
         controller = GameObject.Find("Interface Main");
         PlayerPrefs.SetString("sibling", "x");
         PlayerPrefs.SetInt("sibling_pairs", 0);
@@ -26,6 +28,7 @@ public class FindSiblingButton : MonoBehaviour
                 PlayerPrefs.SetString("sibling", type);
                 PlayerPrefs.SetString("sibling_name", gameObject.name);
                 gameObject.transform.position = new Vector3(transform.position.x - 2000, transform.position.y, transform.position.z);
+                puzzle_script.GetComponent<ResetGameFindSibling>().PlaySound();
             }
             else
             {
@@ -34,6 +37,7 @@ public class FindSiblingButton : MonoBehaviour
                 if (PlayerPrefs.GetString("sibling") == type)
                 {
                     sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
+                    puzzle_script.GetComponent<ResetGameFindSibling>().PlaySound();
                     gameObject.SetActive(false);
                     sibling.SetActive(false);
                     PlayerPrefs.SetInt("sibling_pairs", PlayerPrefs.GetInt("sibling_pairs") + 1);
@@ -47,6 +51,7 @@ public class FindSiblingButton : MonoBehaviour
                 else
                 {
                     gameObject.transform.position = new Vector3(transform.position.x - 2000, transform.position.y, transform.position.z);
+                    puzzle_script.GetComponent<ResetGameFindSibling>().PlaySound();
                     PlayerPrefs.SetInt("need_findsibling", 1);
                     need = 1;
                     PlayerPrefs.SetString("sibling", "x");
@@ -70,6 +75,7 @@ public class FindSiblingButton : MonoBehaviour
                 gameObject.transform.position = new Vector3(transform.position.x + 2000, transform.position.y, transform.position.z);
                 sibling.transform.position = new Vector3(sibling.transform.position.x + 2000, sibling.transform.position.y, sibling.transform.position.z);
                 PlayerPrefs.SetInt("need_findsibling", 0);
+                puzzle_script.GetComponent<ResetGameFindSibling>().PlaySound();
                 need = 0;
             }
         }

@@ -67,10 +67,13 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\Interface\UsingMagicItem.cs" />
+    <Compile Include="Assets\Scripts\DIalogues\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Camera\SwipeDetection.cs" />
+    <Compile Include="Assets\Scripts\DIalogues\DialoguesTrigger.cs" />
     <Compile Include="Assets\Scripts\Interface\Shop\Shop.cs" />
     <Compile Include="Assets\Scripts\Puzzles\FindSibling\FindSiblingButton.cs" />
     <Compile Include="Assets\Scripts\LoadGame.cs" />
+    <Compile Include="Assets\Scripts\DIalogues\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Interface\Shop\ShopChoseBuy.cs" />
     <Compile Include="Assets\Scripts\Interface\LivesTimer.cs" />
     <Compile Include="Assets\Scripts\Puzzles\FollowingPuzzle\FollowingPuzzleScript.cs" />
@@ -84,9 +87,11 @@
     <Compile Include="Assets\Scripts\Puzzles\Plates\PlatesPuzzle.cs" />
     <Compile Include="Assets\Scripts\Puzzles\ClickEvent.cs" />
     <Compile Include="Assets\Scripts\Camera\JoysticMovement.cs" />
-    <Compile Include="Assets\Scripts\DIalogues\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\DIalogues\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\DIalogues\DialoguesTrigger.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\FindObject\ObjectTryFind.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\FindObject\FindObjectScript.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\FindObject\FieldOfViewZoom.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\FindObject\ZoomDetection.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\MusicAutoOff.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />

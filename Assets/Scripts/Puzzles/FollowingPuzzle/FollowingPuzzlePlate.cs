@@ -22,7 +22,7 @@ public class FollowingPuzzlePlate : MonoBehaviour
             {
                 PlayerPrefs.SetInt("following_click_stage", 1);
                 PlayerPrefs.SetInt("following_puzzle_stage", PlayerPrefs.GetInt("following_puzzle_stage")+ 1);
-                if(PlayerPrefs.GetInt("following_puzzle_stage")==7)//Проверка на конец игры
+                if(PlayerPrefs.GetInt("following_puzzle_stage")==10)//Проверка на конец игры
                 {
                     GameObject controller = GameObject.Find("Interface Main");
                     controller.GetComponent<StartGame>().AfterGameFollowingPlates();
@@ -32,9 +32,11 @@ public class FollowingPuzzlePlate : MonoBehaviour
             }
         }
         else
-        {
+        {   
+            FollowingScript.GetComponent<FollowingPuzzleScript>().WrongPlate();
             ResetStage();
             FollowingScript.GetComponent<FollowingPuzzleScript>().ShowPlates();
+            
         }
     }
 

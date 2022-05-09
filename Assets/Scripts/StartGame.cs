@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
+    /*public AudioSource fon1;
+    public AudioSource fon2;*/
+    private AudioSource curr;
+    private float audio_len;
+    public FixedJoystick InGameJoystic;
+    public FixedJoystick InPuzzleJoystic;
+    private Vector3 coords_camera_before;
     public Text coins_int;
     public Text exp_int;
     public Text lives_int;
@@ -15,14 +22,19 @@ public class StartGame : MonoBehaviour
     public GameObject plates_game_interface;
     public GameObject plates_interface;
     public GameObject plates_rewards;
-    private GameObject plates_rewards_magicitem;
+    public GameObject plates_rewards_magicitem;
     public GameObject findsibling_game_interface;
     public GameObject findsibling_interface;
     public GameObject findsibling_rewards;
     public GameObject followingplates_game_interface;
     public GameObject followingplates_interface;
     public GameObject followingplates_rewards;
-    private GameObject followingplates_rewards_magicitem;
+    public GameObject followingplates_rewards_magicitem;
+    public GameObject findobject_game_interface;
+    public GameObject findobject_interface;
+    public GameObject findobject_rewards;
+    public GameObject findobject_rewards_magicitem;
+    public GameObject not_enough_lives;
 
     [SerializeField] GameObject[] all_dialogues;
 
@@ -42,8 +54,11 @@ public class StartGame : MonoBehaviour
         int exp = PlayerPrefs.GetInt("experience");
         int max_exp = PlayerPrefs.GetInt("max_experience");
 
-        /*PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", 5);
-        PlayerPrefs.SetInt("magic_item_add_time_weak", 5);
+        /*audio_len = fon1.time;
+        curr = fon1;*/
+
+        PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", 5);
+        /*PlayerPrefs.SetInt("magic_item_add_time_weak", 5);
         PlayerPrefs.SetInt("magic_item_add_time_middle", 5);
         PlayerPrefs.SetInt("magic_item_add_time_high", 5);*/
 
@@ -102,16 +117,14 @@ public class StartGame : MonoBehaviour
         plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         plates_rewards.SetActive(true);
-        if(plates_rewards_magicitem!=null)
-            plates_rewards_magicitem = plates_rewards.transform.Find("Reward MagicItemSolvePuzzle2D").gameObject;
         if (item==1)
         {
             PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle")+1);
         }
         else
             plates_rewards_magicitem.SetActive(false);
-        plates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
-        plates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
+        plates_rewards.GetComponentsInChildren<Text>()[0].text = exp.ToString();
+        plates_rewards.GetComponentsInChildren<Text>()[1].text = coins.ToString();
 
         need = true;
         game = "plates";
@@ -127,6 +140,10 @@ public class StartGame : MonoBehaviour
             plates_game_interface.GetComponentInChildren<PlatesPuzzle>().onStart();
             plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             plates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
+        }
+        else
+        {
+            not_enough_lives.SetActive(true);
         }
     }
 
@@ -151,7 +168,12 @@ public class StartGame : MonoBehaviour
             PlayerPrefs.SetInt("need_findsibling", 0);
             findsibling_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
         }
+        else
+        {
+            not_enough_lives.SetActive(true);
+        }
     }
+
     public void AfterGameFindSibling()
     {
         int exp = 10;
@@ -211,10 +233,46 @@ public class StartGame : MonoBehaviour
 
                 UpadteInfo();
             }
+            else if (game == "findobject")
+            {
+                Camera.main.orthographic = true;
+                Camera.main.transform.position = coords_camera_before;
+                Camera.main.GetComponent<FieldOfViewZoom>().enabled = false;
+                Camera.main.GetComponent<CameraZoom>().enabled = true;
+                Camera.main.GetComponent<JoysticMovement>().inpuzzle = false;
+                Camera.main.GetComponent<JoysticMovement>()._moveSpeed = Camera.main.orthographicSize * 3;
+                Camera.main.GetComponent<JoysticMovement>()._joystick = InGameJoystic;
+                _interface.SetActive(true);
+                findobject_rewards.SetActive(false);
+                findobject_game_interface.SetActive(false);
+                swiping.SetActive(true);
+
+                UpadteInfo();
+            }
             need = false;
         }
+/*        if(audio_len>0)
+        {
+            audio_len -= Time.deltaTime;
+        }
+        else
+        {
+            if(curr==fon1)
+            {
+                audio_len = fon2.time;
+                fon1.gameObject.SetActive(false);
+                fon2.gameObject.SetActive(true);
+                curr = fon2;
+            }
+            else if(curr==fon2)
+            {
+                audio_len = fon1.time;
+                fon2.gameObject.SetActive(false);
+                fon1.gameObject.SetActive(true);
+                curr = fon1;
+            }
+        }*/
     }
-
 
     public void AddLives()
     {
@@ -230,7 +288,6 @@ public class StartGame : MonoBehaviour
             followingplates_interface.SetActive(false);
             followingplates_game_interface.SetActive(true);
             followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
-            followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
             followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
             for (int i = 1; i <= 9; i++)
             {
@@ -238,6 +295,10 @@ public class StartGame : MonoBehaviour
             }
             PlayerPrefs.SetInt("following_puzzle_stage", 1);
             followingplates_game_interface.GetComponentInChildren<FollowingPuzzleScript>().StartGame();
+        }
+        else
+        {
+            not_enough_lives.SetActive(true);
         }
     }
 
@@ -254,16 +315,14 @@ public class StartGame : MonoBehaviour
         followingplates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         followingplates_rewards.SetActive(true);
-        if (followingplates_rewards_magicitem != null)
-            followingplates_rewards_magicitem = plates_rewards.transform.Find("Reward MagicItemAddTimeWeak").gameObject;
         if (item == 1)
         {
             PlayerPrefs.SetInt("magic_item_add_time_weak", PlayerPrefs.GetInt("magic_item_add_time_weak") + 1);
         }
         else
             followingplates_rewards_magicitem.SetActive(false);
-        followingplates_rewards.transform.Find("Reward EXP Int").GetComponent<Text>().text = exp.ToString();
-        followingplates_rewards.transform.Find("Reward Coins Int").GetComponent<Text>().text = coins.ToString();
+        followingplates_rewards.GetComponentsInChildren<Text>()[0].text = exp.ToString();
+        followingplates_rewards.GetComponentsInChildren<Text>()[1].text = coins.ToString();
 
         need = true;
         game = "followingplates";
@@ -273,6 +332,72 @@ public class StartGame : MonoBehaviour
     {
         _interface.SetActive(true);
         followingplates_game_interface.SetActive(false);
+        UpadteInfo();
+    }
+
+    public void StartGameFindObject()
+    {
+        if (PlayerPrefs.GetInt("lives") > 0)
+        {
+            LivesCountMinus();
+            coords_camera_before = Camera.main.transform.position;
+            Camera.main.GetComponent<FieldOfViewZoom>().enabled = true;
+            Camera.main.GetComponent<CameraZoom>().enabled = false;
+            Camera.main.GetComponent<JoysticMovement>().inpuzzle = true;
+            Camera.main.GetComponent<JoysticMovement>()._moveSpeed = 3;
+            Camera.main.orthographic = false;
+            Camera.main.GetComponent<JoysticMovement>()._joystick = InPuzzleJoystic;
+            Camera.main.transform.position = new Vector3(28, -3, 196);
+            
+            findobject_interface.SetActive(false);
+            findobject_game_interface.SetActive(true);
+            findobject_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
+            findobject_game_interface.GetComponentInChildren<PuzzleTimer>().OnStart();
+            findobject_game_interface.GetComponentInChildren<FindObjectScript>().onStart();
+        }
+        else
+        {
+            not_enough_lives.SetActive(true);
+        }
+    }
+
+    public void AfterGameFindObject()
+    {
+        int exp = 15;
+        int coins = Random.Range(15, 25);
+        int item = Random.Range(1, 51);
+
+        PlayerPrefs.SetInt("lives", PlayerPrefs.GetInt("lives") + 1);
+        PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") + exp);
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + coins);
+
+        findobject_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
+
+        findobject_rewards.SetActive(true);
+        if (item == 1)
+        {
+            PlayerPrefs.SetInt("magic_item_add_time_weak", PlayerPrefs.GetInt("magic_item_add_time_weak") + 1);
+        }
+        else
+            findobject_rewards_magicitem.SetActive(false);
+        findobject_rewards.GetComponentsInChildren<Text>()[0].text = exp.ToString();
+        findobject_rewards.GetComponentsInChildren<Text>()[1].text = coins.ToString();
+
+        need = true;
+        game = "findobject";
+    }
+
+    public void LoseGameFindObject()
+    {
+        Camera.main.orthographic = true;
+        Camera.main.transform.position = coords_camera_before;
+        Camera.main.GetComponent<FieldOfViewZoom>().enabled = false;
+        Camera.main.GetComponent<CameraZoom>().enabled = true;
+        Camera.main.GetComponent<JoysticMovement>().inpuzzle = false;
+        Camera.main.GetComponent<JoysticMovement>()._moveSpeed = Camera.main.orthographicSize * 3;
+        Camera.main.GetComponent<JoysticMovement>()._joystick = InGameJoystic;
+        _interface.SetActive(true);
+        findobject_game_interface.SetActive(false);
         UpadteInfo();
     }
 }

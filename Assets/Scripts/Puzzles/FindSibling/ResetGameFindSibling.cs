@@ -43,6 +43,10 @@ public class ResetGameFindSibling : MonoBehaviour
     [SerializeField] private GameObject int_text_add_time_middle;
     [SerializeField] private GameObject int_text_add_time_high;
 
+    public GameObject Audio_On_Turn_Plate;
+    public GameObject Audio_Use_Add_Time;
+    public GameObject Audio_Use_Solve_Item;
+
     public GameObject[] plates_massiv = new GameObject[26];
 
 
@@ -94,6 +98,9 @@ public class ResetGameFindSibling : MonoBehaviour
     {
         Start();
         UpdateMagicItemQuantity();
+        Audio_Use_Add_Time.SetActive(false);
+        Audio_Use_Solve_Item.SetActive(false);
+        Audio_On_Turn_Plate.SetActive(false);
         for (int i = 0; i <= 12; i++)
         {
             list[i] = 0;
@@ -132,5 +139,11 @@ public class ResetGameFindSibling : MonoBehaviour
         int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
         int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
         int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
+    }
+
+    public void PlaySound()
+    {
+        Audio_On_Turn_Plate.SetActive(false);
+        Audio_On_Turn_Plate.SetActive(true);
     }
 }

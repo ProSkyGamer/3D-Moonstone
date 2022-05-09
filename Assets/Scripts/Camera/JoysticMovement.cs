@@ -4,47 +4,64 @@ using UnityEngine;
 
 public class JoysticMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FixedJoystick _joystick;
-    private Vector3 coord;
+    [SerializeField] public FixedJoystick _joystick;
+    [SerializeField] public bool inpuzzle;
+    private Vector3 moved;
 
-    [SerializeField] private float _moveSpeed;
+    [SerializeField] public float _moveSpeed;
 
-    private void Start()
-    {
-        coord.y = transform.position.y;
-    }
 
     private void FixedUpdate()
     {
         if (_joystick.enabled)
         {
-            if (transform.position.x > 50)
+            moved = new Vector3(transform.position.x + _joystick.Horizontal * _moveSpeed, transform.position.y, transform.position.z + _joystick.Vertical * _moveSpeed);
+            if (!inpuzzle)
             {
-                coord = transform.position;
-                coord.x = 50;
-                transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
+                if (moved.x > 55)
+                {
+                    moved.x = 55;
+                }
+                if (moved.x < 15)
+                {
+                    moved.x = 15;
+                }
+                if (moved.z > 200)
+                {
+                    moved.z = 200;
+                }
+                if (moved.z < 15)
+                {
+                    moved.z = 15;
+                }
             }
-            if (transform.position.x < 10)
+            else
             {
-                coord = transform.position;
-                coord.x = 10;
-                transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
-            }
-            if (transform.position.z > 50)
-            {
-                coord = transform.position;
-                coord.z = 50;
-                transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
-            }
-            if (transform.position.z < 10)
-            {
-                coord = transform.position;
-                coord.z = 10;
-                transform.position = Vector3.Lerp(transform.position, coord, Time.deltaTime);
+                if (moved.x > 40)
+                {
+                    moved.x = 40;
+                }
+                if (moved.x < 28)
+                {
+                    moved.x = 28;
+                }
+                if (moved.z > 208)
+                {
+                    moved.z = 208;
+                }
+                if (moved.z < 196)
+                {
+                    moved.z = 196;
+                }
             }
 
-            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
+            //28 - 40    x
+            //-3 y
+            //196-208
+            if (moved != transform.position)
+            {
+                transform.position = new Vector3(Mathf.Lerp(transform.position.x, moved.x, Time.deltaTime), transform.position.y, Mathf.Lerp(transform.position.z, moved.z, Time.deltaTime));
+            }
         }
     }
 }

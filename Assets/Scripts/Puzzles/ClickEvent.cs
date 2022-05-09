@@ -5,14 +5,41 @@ using UnityEngine.EventSystems;
 
 public class ClickEvent : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject PuzzleInt;
-    public GameObject swiping;
-    public GameObject interface_menu;
+    public GameObject MenuPuzzleInterface;
+    public GameObject SwipesDetection;
+    public GameObject IterfaceMain;
+    public bool is_this;
+    public bool inGame;
+    private FindObjectScript script_controller;
     public void OnPointerClick(PointerEventData eventData)
     {
-        PuzzleInt.SetActive(true);
-        swiping.SetActive(false);
-        interface_menu.SetActive(false);
+        if (!inGame)
+        {
+            MenuPuzzleInterface.SetActive(true);
+            SwipesDetection.SetActive(false);
+            IterfaceMain.SetActive(false);
+        }
+        else
+        {
+            if (script_controller == null)
+                script_controller = gameObject.GetComponentInParent<FindObjectScript>();
+            if (PlayerPrefs.GetInt("find_object_wait") == 0)
+            {
+                if (is_this)
+                {
+                    GameObject controller = GameObject.Find("Interface Main");
+                    controller.GetComponent<StartGame>().AfterGameFindObject();
+                }
+                else
+                {
+                    script_controller.NotClick();
+                }
+            }
+            else
+            {
+                script_controller.wait.SetActive(true);
+            }
+        }
     }
 
 }

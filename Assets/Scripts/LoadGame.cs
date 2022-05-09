@@ -13,6 +13,8 @@ public class LoadGame : MonoBehaviour
 
     public GameObject text_before;
     public GameObject text_after;
+    private float timer=1;
+    private bool load;
     void Start()
     {
         StartCoroutine(LoadScene());
@@ -22,20 +24,31 @@ public class LoadGame : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(loadlevel);
         asyncLoad.allowSceneActivation = false;
-        if(asyncLoad.progress >= .9f)
-        {
-            text_before.SetActive(false);
-            text_after.SetActive(true);
-        }
         while(!asyncLoad.isDone)
         {
             progress_bar.value = asyncLoad.progress;
 
-            if(asyncLoad.progress>=.9f && !asyncLoad.allowSceneActivation)
+            if(asyncLoad.progress>=.9f)
             {
-                if(Input.anyKeyDown)
+                if(!text_after.activeSelf)
                 {
-                    asyncLoad.allowSceneActivation = true;
+                    text_before.SetActive(false);
+                    text_after.SetActive(true);
+                }
+                if (!asyncLoad.allowSceneActivation)
+                {
+                    if (!load && Input.anyKey)
+                        load = true;
+                    if(timer>=0)
+                        timer -= Time.deltaTime;
+                    else
+                    {
+                        if (load || Input.anyKeyDown)
+                        {
+                            asyncLoad.allowSceneActivation = true;
+                            load = false;
+                        }
+                    }
                 }
             }
             yield return null;

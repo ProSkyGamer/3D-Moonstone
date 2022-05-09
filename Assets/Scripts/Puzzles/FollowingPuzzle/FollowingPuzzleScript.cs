@@ -11,7 +11,7 @@ public class FollowingPuzzleScript : MonoBehaviour
     private bool need_show;
     private bool after_show;
     private bool need_off;
-    private int[] followingplates = new int[7];
+    private int[] followingplates = new int[10];
     private float timer;
 
     [SerializeField] private GameObject ShowingPlate1;
@@ -20,6 +20,8 @@ public class FollowingPuzzleScript : MonoBehaviour
     [SerializeField] private GameObject ShowingPlate4;
     [SerializeField] private GameObject ShowingPlate5;
     [SerializeField] private GameObject ShowingPlate6;
+
+    [SerializeField] private GameObject[] Sounds_plates;
 
     [SerializeField] private Color Plate1;
     [SerializeField] private Color Plate2;
@@ -33,12 +35,22 @@ public class FollowingPuzzleScript : MonoBehaviour
     [SerializeField] private GameObject int_text_add_time_weak;
     [SerializeField] private GameObject int_text_add_time_middle;
     [SerializeField] private GameObject int_text_add_time_high;
-    //Показ нужных плиток
+
+    public GameObject Audio_Use_Add_Time;
+    public GameObject Audio_Use_Solve_Item;
+    public GameObject Audio_Wrong_Plate;
 
     public void StartGame()
     {
         UpdateMagicItemQuantity();
         controller = GameObject.Find("Interface Main");
+        Audio_Use_Add_Time.SetActive(false);
+        Audio_Use_Solve_Item.SetActive(false);
+        Audio_Wrong_Plate.SetActive(false);
+        for (int i = 1; i <= 6; i++)
+        {
+            Sounds_plates[i].SetActive(false);
+        }
         for (int i = 1; i <= 9; i++)
         {
             followingplates[i] = PlayerPrefs.GetInt("followingplate" + i);
@@ -64,6 +76,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     if (followingplates[curr_show] == 1)
                     {
                         ShowingPlate1.GetComponent<RawImage>().color = Plate1;
+                        Sounds_plates[1].SetActive(false);
+                        Sounds_plates[1].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -71,6 +85,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     else if (followingplates[curr_show] == 2)
                     {
                         ShowingPlate2.GetComponent<RawImage>().color = Plate2;
+                        Sounds_plates[2].SetActive(false);
+                        Sounds_plates[2].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -78,6 +94,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     else if (followingplates[curr_show] == 3)
                     {
                         ShowingPlate3.GetComponent<RawImage>().color = Plate3;
+                        Sounds_plates[3].SetActive(false);
+                        Sounds_plates[3].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -85,6 +103,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     else if (followingplates[curr_show] == 4)
                     {
                         ShowingPlate4.GetComponent<RawImage>().color = Plate4;
+                        Sounds_plates[4].SetActive(false);
+                        Sounds_plates[4].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -92,6 +112,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     else if (followingplates[curr_show] == 5)
                     {
                         ShowingPlate5.GetComponent<RawImage>().color = Plate5;
+                        Sounds_plates[5].SetActive(false);
+                        Sounds_plates[5].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -99,6 +121,8 @@ public class FollowingPuzzleScript : MonoBehaviour
                     else if (followingplates[curr_show] == 6)
                     {
                         ShowingPlate6.GetComponent<RawImage>().color = Plate6;
+                        Sounds_plates[6].SetActive(false);
+                        Sounds_plates[6].SetActive(true);
                         curr_show++;
                         timer = 0.5f;
                         need_off = true;
@@ -142,5 +166,11 @@ public class FollowingPuzzleScript : MonoBehaviour
         int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
         int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
         int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
+    }
+
+    public void WrongPlate()
+    {
+        Audio_Wrong_Plate.SetActive(false);
+        Audio_Wrong_Plate.SetActive(true);
     }
 }

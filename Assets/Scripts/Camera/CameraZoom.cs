@@ -14,6 +14,10 @@ public class CameraZoom : MonoBehaviour
 
     private void OnZoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomMin, zoomMax);
+        if (gameObject.GetComponent<CameraZoom>().enabled)
+        {
+            Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomMin, zoomMax);
+            Camera.main.gameObject.GetComponent<JoysticMovement>()._moveSpeed = Camera.main.orthographicSize * 3;
+        }
     }
 }

@@ -23,15 +23,20 @@ public class SwipeDetection : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     isSwiping = true;
-                    tapPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                    tapPosition = Input.mousePosition;
                 }
             }
             else
             {
                 if (Input.GetMouseButton(0))
                 {
-                    swipeDelta = tapPosition - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                    SwipeEvent(swipeDelta);
+                    if (tapPosition != Input.mousePosition)
+                    {
+                        swipeDelta = tapPosition - Input.mousePosition;
+                        print(swipeDelta);
+                        SwipeEvent(swipeDelta);
+                        tapPosition = Input.mousePosition;
+                    }
                 }
             }
             if (Input.GetMouseButtonUp(0))
