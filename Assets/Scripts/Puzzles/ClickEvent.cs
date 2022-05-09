@@ -27,6 +27,7 @@ public class ClickEvent : MonoBehaviour, IPointerClickHandler
             {
                 if (is_this)
                 {
+                    gameObject.GetComponent<Outline>().enabled = false;
                     GameObject controller = GameObject.Find("Interface Main");
                     controller.GetComponent<StartGame>().AfterGameFindObject();
                 }

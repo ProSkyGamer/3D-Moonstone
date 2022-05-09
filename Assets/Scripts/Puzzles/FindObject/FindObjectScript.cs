@@ -24,17 +24,26 @@ public class FindObjectScript : MonoBehaviour
     [SerializeField] private string[] all_riddles;
     [SerializeField] private string[] all_answers;
 
+    [SerializeField] private GameObject int_text_solve_puzzle;
+    [SerializeField] private GameObject int_text_add_time_weak;
+    [SerializeField] private GameObject int_text_add_time_middle;
+    [SerializeField] private GameObject int_text_add_time_high;
+
+    private StartGame controller;
 
 
-
+    private void Start()
+    {
+        controller = gameObject.GetComponentInParent<StartGame>();
+    }
     public void onStart()
     {
+        UpdateMagicItemQuantity();
         obj_to_find = Random.Range(0, all_objects.Length);
         n_riddle = Random.Range(0, all_riddles.Length);
         all_objects[obj_to_find].GetComponent<ClickEvent>().is_this = true;
         _text_riddle.GetComponent<Text>().text = all_riddles[n_riddle];
         timer_wait.GetComponent<Text>().text = "Можно искать предмет";
-        print(obj_to_find);
         Audio_Use_Add_Time.SetActive(false);
         Audio_Use_Solve_Item.SetActive(false);
         Audio_Wrong_Object.SetActive(false);
@@ -80,5 +89,20 @@ public class FindObjectScript : MonoBehaviour
         {
             not_right.GetComponent<TextDissapear>().OnceMore();
         }
+    }
+
+    public void UsedSolveItem()
+    {
+        controller.AfterGameFindObject();
+        PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle") - 1);
+        UpdateMagicItemQuantity();
+    }
+
+    public void UpdateMagicItemQuantity()
+    {
+        int_text_solve_puzzle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_solve_2d_puzzle").ToString();
+        int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
+        int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
+        int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
     }
 }

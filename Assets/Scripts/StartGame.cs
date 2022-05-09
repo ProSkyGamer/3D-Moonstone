@@ -40,6 +40,7 @@ public class StartGame : MonoBehaviour
 
     void Start()
     {
+        ResetTime();
         if (PlayerPrefs.GetInt("max_experience") == 0)
         {
             PlayerPrefs.SetInt("max_experience", 100);
@@ -66,8 +67,8 @@ public class StartGame : MonoBehaviour
         lives_int.text = System.Convert.ToString(lives);
         exp_int.text = System.Convert.ToString(exp + "/" + max_exp);
 
-        PlayerPrefs.SetInt("dialogues_number",0);
-        if(PlayerPrefs.GetInt("dialogue_number")==0)
+        PlayerPrefs.SetInt("dialogues_number", 0);
+        if (PlayerPrefs.GetInt("dialogue_number") == 0)
             all_dialogues[0].GetComponent<DialoguesTrigger>().TriggerDialogue();
     }
 
@@ -87,7 +88,7 @@ public class StartGame : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("experience") >= PlayerPrefs.GetInt("max_experience"))
         {
-            if(PlayerPrefs.GetInt("dialogues_number")<=all_dialogues.Length)
+            if (PlayerPrefs.GetInt("dialogues_number") <= all_dialogues.Length)
                 all_dialogues[PlayerPrefs.GetInt("dialogues_number")].GetComponent<DialoguesTrigger>().TriggerDialogue();
             PlayerPrefs.SetInt("experience", PlayerPrefs.GetInt("experience") - PlayerPrefs.GetInt("max_experience"));
             PlayerPrefs.SetInt("max_experience", PlayerPrefs.GetInt("max_experience") + 100);
@@ -117,9 +118,9 @@ public class StartGame : MonoBehaviour
         plates_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = false;
 
         plates_rewards.SetActive(true);
-        if (item==1)
+        if (item == 1)
         {
-            PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle")+1);
+            PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", PlayerPrefs.GetInt("magic_item_solve_2d_puzzle") + 1);
         }
         else
             plates_rewards_magicitem.SetActive(false);
@@ -251,27 +252,27 @@ public class StartGame : MonoBehaviour
             }
             need = false;
         }
-/*        if(audio_len>0)
-        {
-            audio_len -= Time.deltaTime;
-        }
-        else
-        {
-            if(curr==fon1)
-            {
-                audio_len = fon2.time;
-                fon1.gameObject.SetActive(false);
-                fon2.gameObject.SetActive(true);
-                curr = fon2;
-            }
-            else if(curr==fon2)
-            {
-                audio_len = fon1.time;
-                fon2.gameObject.SetActive(false);
-                fon1.gameObject.SetActive(true);
-                curr = fon1;
-            }
-        }*/
+        /*        if(audio_len>0)
+                {
+                    audio_len -= Time.deltaTime;
+                }
+                else
+                {
+                    if(curr==fon1)
+                    {
+                        audio_len = fon2.time;
+                        fon1.gameObject.SetActive(false);
+                        fon2.gameObject.SetActive(true);
+                        curr = fon2;
+                    }
+                    else if(curr==fon2)
+                    {
+                        audio_len = fon1.time;
+                        fon2.gameObject.SetActive(false);
+                        fon1.gameObject.SetActive(true);
+                        curr = fon1;
+                    }
+                }*/
     }
 
     public void AddLives()
@@ -348,7 +349,7 @@ public class StartGame : MonoBehaviour
             Camera.main.orthographic = false;
             Camera.main.GetComponent<JoysticMovement>()._joystick = InPuzzleJoystic;
             Camera.main.transform.position = new Vector3(28, -3, 196);
-            
+
             findobject_interface.SetActive(false);
             findobject_game_interface.SetActive(true);
             findobject_game_interface.GetComponentInChildren<PuzzleTimer>().enabled = true;
@@ -399,5 +400,15 @@ public class StartGame : MonoBehaviour
         _interface.SetActive(true);
         findobject_game_interface.SetActive(false);
         UpadteInfo();
+    }
+
+    public void StopTime()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResetTime()
+    {
+        Time.timeScale = 1;
     }
 }
