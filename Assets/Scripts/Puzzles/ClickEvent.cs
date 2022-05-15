@@ -22,7 +22,7 @@ public class ClickEvent : MonoBehaviour, IPointerClickHandler
         else
         {
             if (script_controller == null)
-                script_controller = gameObject.GetComponentInParent<FindObjectScript>();
+                script_controller = GameObject.Find("FindObjectScript").GetComponent<FindObjectScript>();
             if (PlayerPrefs.GetInt("find_object_wait") == 0)
             {
                 if (is_this)

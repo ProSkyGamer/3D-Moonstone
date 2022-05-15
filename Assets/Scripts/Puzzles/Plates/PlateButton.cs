@@ -20,7 +20,7 @@ public class PlateButton : MonoBehaviour
     private bool down;
     private bool ismove=false;
 
-    private float screen_move = Screen.width * 3 / 24f;
+    private float screen_move = Screen.height * 3 / 10.8f;
 
     public void onStart()
     {

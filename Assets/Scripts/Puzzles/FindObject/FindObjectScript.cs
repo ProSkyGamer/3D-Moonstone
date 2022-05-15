@@ -39,8 +39,12 @@ public class FindObjectScript : MonoBehaviour
     public void onStart()
     {
         UpdateMagicItemQuantity();
+        _text_riddle.SetActive(true);
+        inputField.GetComponent<InputField>().text = "";
+        inputField.SetActive(true);
         obj_to_find = Random.Range(0, all_objects.Length);
         n_riddle = Random.Range(0, all_riddles.Length);
+        PlayerPrefs.SetInt("find_object_wait", 0);
         all_objects[obj_to_find].GetComponent<ClickEvent>().is_this = true;
         _text_riddle.GetComponent<Text>().text = all_riddles[n_riddle];
         timer_wait.GetComponent<Text>().text = "Можно искать предмет";
@@ -73,6 +77,7 @@ public class FindObjectScript : MonoBehaviour
         PlayerPrefs.SetInt("find_object_wait", time_delay);
         seconds = time_delay;
         timer = time_delay;
+        timer_wait.GetComponent<Text>().text = "Следующая попытка найти через " + seconds.ToString();
         Audio_Wrong_Object.SetActive(false);
         Audio_Wrong_Object.SetActive(true);
     }
@@ -104,5 +109,13 @@ public class FindObjectScript : MonoBehaviour
         int_text_add_time_weak.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_weak").ToString();
         int_text_add_time_middle.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_middle").ToString();
         int_text_add_time_high.GetComponent<Text>().text = PlayerPrefs.GetInt("magic_item_add_time_high").ToString();
+    }
+
+    public void TurnOffAllLightning()
+    {
+        foreach(GameObject g in all_objects)
+        {
+            g.GetComponent<Outline>().enabled = false;
+        }
     }
 }

@@ -4,19 +4,33 @@ ScriptsOnlyBuild:
     - CameraMovement
     - CameraZoom
     - ClickEvent
+    - DialogueManager
+    - DialoguesTrigger
+    - FieldOfViewZoom
+    - FindObjectScript
     - FindSiblingButton
     - FixedJoystick
     - FollowingPuzzlePlate
     - FollowingPuzzleScript
     - JoysticMovement
     - LivesTimer
+    - LoadGame
+    - MusicAutoOff
     - Outline
     - PlateButton
     - PlatesPuzzle
     - PuzzleTimer
     - ResetGameFindSibling
+    - Shop
+    - ShopBuyItem
+    - ShopChoseBuy
+    - ShopQuantityChoose
+    - ShopSelectCount
     - StartGame
     - SwipeDetection
+    - TextDissapear
+    - UsingMagicItem
+    - ZoomDetection
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     Unity.PlasticSCM.Editor.dll:
@@ -41,7 +55,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -63,13 +79,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -78,55 +96,85 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1440}
+      Script: {instanceID: 1448}
     - Class: 114
-      Script: {instanceID: 1510}
+      Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1942}
+      Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 1978}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 2002}
+      Script: {instanceID: 1658}
     - Class: 114
-      Script: {instanceID: 2056}
+      Script: {instanceID: 1922}
     - Class: 114
-      Script: {instanceID: 2082}
+      Script: {instanceID: 1958}
     - Class: 114
-      Script: {instanceID: 2166}
+      Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 2182}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2316}
+      Script: {instanceID: 2062}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 2086}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2120}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2152}
     - Class: 114
-      Script: {instanceID: 2726}
+      Script: {instanceID: 2168}
+    - Class: 114
+      Script: {instanceID: 2176}
+    - Class: 114
+      Script: {instanceID: 2284}
+    - Class: 114
+      Script: {instanceID: 2306}
+    - Class: 114
+      Script: {instanceID: 2344}
+    - Class: 114
+      Script: {instanceID: 2458}
+    - Class: 114
+      Script: {instanceID: 2600}
+    - Class: 114
+      Script: {instanceID: 2626}
+    - Class: 114
+      Script: {instanceID: 2652}
+    - Class: 114
+      Script: {instanceID: 2670}
+    - Class: 114
+      Script: {instanceID: 2720}
+    - Class: 114
+      Script: {instanceID: 2812}
     - Class: 114
       Script: {instanceID: 2820}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2922}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 2946}
     - Class: 114
-      Script: {instanceID: 3800}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 4128}
+      Script: {instanceID: 3798}
     - Class: 114
-      Script: {instanceID: 4418}
+      Script: {instanceID: 3930}
     - Class: 114
-      Script: {instanceID: 4432}
+      Script: {instanceID: 4040}
+    - Class: 114
+      Script: {instanceID: 4068}
+    - Class: 114
+      Script: {instanceID: 4132}
+    - Class: 114
+      Script: {instanceID: 4422}
+    - Class: 114
+      Script: {instanceID: 4436}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -142,6 +190,61 @@ ScriptsOnlyBuild:
     - Class: 213
       Script: {instanceID: 0}
     - Class: 218
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LoadScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1448}
+    - Class: 114
+      Script: {instanceID: 1658}
+    - Class: 114
+      Script: {instanceID: 2036}
+    - Class: 114
+      Script: {instanceID: 2168}
+    - Class: 114
+      Script: {instanceID: 2344}
+    - Class: 114
+      Script: {instanceID: 2448}
+    - Class: 114
+      Script: {instanceID: 2458}
+    - Class: 114
+      Script: {instanceID: 2626}
+    - Class: 114
+      Script: {instanceID: 2820}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -182,6 +285,18 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: bb6b81b4da695850ce4fafff8ace1297
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectTryFind
+  - hash:
+      serializedVersion: 2
+      Hash: 02d392591779ddc49b9ba7934470f4d3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopSelectCount
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -210,6 +325,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZoomDetection
   - hash:
       serializedVersion: 2
       Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
@@ -242,7 +363,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: fb88745de06a0e34ee140e37242bd2fb
+      Hash: c558dfd188fe958f6fe228841898f877
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ResetGameFindSibling
@@ -290,10 +411,22 @@ ScriptsOnlyBuild:
     className: CameraZoom
   - hash:
       serializedVersion: 2
+      Hash: 7ae1d413671991b6f2e3992a57c5f36d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UsingMagicItem
+  - hash:
+      serializedVersion: 2
       Hash: 91d258529db2b5060a913f2afcea1a21
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 2f342c9dd1c17db50033fa5a58d767c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindObjectScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -306,6 +439,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: e688a805f48c19a53d78d1a3cea53057
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialoguesTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: edd8a2fc78106262040bf6bad624d2c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shop
   - hash:
       serializedVersion: 2
       Hash: b1f2d7955c5c56ed57d1e76287b7930f
@@ -362,6 +507,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 530d82fa80ff570dae6bb52cd0536e8d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -372,6 +523,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: d38a3cb90a2f8f683c63ac4af93d51ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopChoseBuy
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -404,6 +561,12 @@ ScriptsOnlyBuild:
     className: LivesTimer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FieldOfViewZoom
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -428,7 +591,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 8abea77863af168d3b191dcc8e61384a
+      Hash: 59e0ac2f7d0e65a794939c20cb6cf205
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowingPuzzleScript
@@ -462,6 +625,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlateButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicAutoOff
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -506,7 +675,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: e237b3c9b5f5b09eb724c3be15a93d20
+      Hash: b69e327d23ec6239d704928d3c17a85c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartGame
@@ -638,10 +807,28 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: bd16d975fcbc092ea09045545db81dff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopQuantityChoose
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 381faba1c26f408dec692df034c7b598
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopBuyItem
+  - hash:
+      serializedVersion: 2
+      Hash: af46884a8c70fec2c58bab317cfa6b08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextDissapear
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -650,7 +837,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: f1eb836c64ce39813c4b27bb179bffe8
+      Hash: fd2d5b2508daaad0772d015da4172805
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlatesPuzzle
@@ -668,7 +855,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 350db3c5626b2bac9c6b946a35928d13
+      Hash: adb8ff43ecdfe04848d0df7ec55cf4ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ClickEvent
@@ -680,7 +867,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 6c0f9bf04422b9f2a65554654ab6268c
+      Hash: 09ddcb1e8b0e01707b0828f361f4bf70
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JoysticMovement
@@ -698,5 +885,6 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   platform: 13
   scenePathNames:
+  - Assets/Scenes/LoadScreen.unity
   - Assets/Scenes/Game.unity
   playerPath: C:/Users/User/Desktop/DSTU/Unity/Game-Quest-Puzzle.apk

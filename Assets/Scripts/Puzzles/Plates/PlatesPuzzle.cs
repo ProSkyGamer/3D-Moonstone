@@ -52,7 +52,7 @@ public class PlatesPuzzle : MonoBehaviour
     private int j;
     private int temp=0;
     private bool move;
-    private float screen_move = Screen.width * 3 / 24f;
+    private float screen_move = Screen.height * 3 / 10.8f; //3/10.8
 
     private void Start()
     {
@@ -66,6 +66,8 @@ public class PlatesPuzzle : MonoBehaviour
         Audio_On_Move_Plate.SetActive(false);
         Audio_On_Cant_Move_Plate.SetActive(false);
         moved = true;
+        obj_for_move = null;
+        coord_obj_to_move = Vector3.zero;
         puzzle_var = Random.Range(1, 4);
         if (puzzle_var == 1)
         {

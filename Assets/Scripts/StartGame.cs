@@ -59,16 +59,15 @@ public class StartGame : MonoBehaviour
         curr = fon1;*/
 
         PlayerPrefs.SetInt("magic_item_solve_2d_puzzle", 5);
-        /*PlayerPrefs.SetInt("magic_item_add_time_weak", 5);
+        PlayerPrefs.SetInt("magic_item_add_time_weak", 5);
         PlayerPrefs.SetInt("magic_item_add_time_middle", 5);
-        PlayerPrefs.SetInt("magic_item_add_time_high", 5);*/
+        PlayerPrefs.SetInt("magic_item_add_time_high", 5);
 
         coins_int.text = System.Convert.ToString(coins);
         lives_int.text = System.Convert.ToString(lives);
         exp_int.text = System.Convert.ToString(exp + "/" + max_exp);
 
-        PlayerPrefs.SetInt("dialogues_number", 0);
-        if (PlayerPrefs.GetInt("dialogue_number") == 0)
+        if (PlayerPrefs.GetInt("dialogues_number") == 0)
             all_dialogues[0].GetComponent<DialoguesTrigger>().TriggerDialogue();
     }
 
@@ -390,6 +389,7 @@ public class StartGame : MonoBehaviour
 
     public void LoseGameFindObject()
     {
+        findobject_game_interface.GetComponentInChildren<FindObjectScript>().TurnOffAllLightning();
         Camera.main.orthographic = true;
         Camera.main.transform.position = coords_camera_before;
         Camera.main.GetComponent<FieldOfViewZoom>().enabled = false;
